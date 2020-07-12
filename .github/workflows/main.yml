@@ -1,0 +1,33 @@
+name: Publish
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+  
+    - name: Build Publish
+      run: |
+        git clone https://github.com/JohnSundell/Publish.git
+        cd Publish
+        make
+    - name: Generate Site
+      run: publish generate
+      
+    - name: Publish in github pages repo
+      uses: crazy-max/ghaction-github-pages@v1.4.0
+      with:
+        repo: murilogteixeira/MuriloWebsite
+        target_branch: gh-pages
+        keep_history: true
+        allow_empty_commit: false
+        build_dir: Output
+        committer_name: Murilo Teixeira 
+        commit_message: Update blog content
+      env:
+        GITHUB_PAT: ${{ secrets.REPO_TOKEN }}

@@ -25,7 +25,7 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
 //            .head(for: index, on: context.site),
-            .head(for: index, on: context.site, titleSeparator: " | ", stylesheetPaths: ["MyTheme/styles.css"], rssFeedPath: nil, rssFeedTitle: nil),
+            .head(for: index, on: context.site, titleSeparator: " | ", stylesheetPaths: ["MuriloWebsite/styles.css"], rssFeedPath: nil, rssFeedTitle: nil),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(

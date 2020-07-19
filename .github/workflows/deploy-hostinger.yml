@@ -1,0 +1,23 @@
+name: Publish
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: ls -a via ssh
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          pwd
+          ls -a
+        host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT}}
+        user: ${{ secrets.USERNAME}}
+        key: ${{ secrets.KEY}}

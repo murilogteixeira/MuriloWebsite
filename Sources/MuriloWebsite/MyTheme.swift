@@ -24,17 +24,17 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                        context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: index, on: context.site),
-//            .head(for: index, on: context.site, titleSeparator: " | ", stylesheetPaths: ["MuriloWebsite/styles.css"], rssFeedPath: nil, rssFeedTitle: nil),
+            .bootstrapHead(for: index, on: context.site),
+//            .head(for: index, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
-                    .h1(.text(index.title)),
-                    .p(
-                        .class("description"),
-                        .text(context.site.description)
-                    ),
-                    .h2("Latest content"),
+//                    .h1(.text(index.title)),
+//                    .p(
+//                        .class("description"),
+//                        .text(context.site.description)
+//                    ),
+                    .h2("Posts recentes"),
                     .itemList(
                         for: context.allItems(
                             sortedBy: \.date,
@@ -52,7 +52,8 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                          context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: section, on: context.site),
+            .bootstrapHead(for: section, on: context.site),
+//            .head(for: section, on: context.site),
             .body(
                 .header(for: context, selectedSection: section.id),
                 .wrapper(
@@ -68,7 +69,8 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                       context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: item, on: context.site),
+            .bootstrapHead(for: item, on: context.site),
+//            .head(for: item, on: context.site),
             .body(
                 .class("item-page"),
                 .header(for: context, selectedSection: item.sectionID),
@@ -91,7 +93,8 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                       context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .bootstrapHead(for: page, on: context.site),
+//            .head(for: page, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(.contentBody(page.body)),
@@ -104,7 +107,8 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                          context: PublishingContext<Site>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .bootstrapHead(for: page, on: context.site),
+//            .head(for: page, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -131,7 +135,8 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                             context: PublishingContext<Site>) throws -> HTML? {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .bootstrapHead(for: page, on: context.site),
+//            .head(for: page, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -159,34 +164,113 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
     }
 }
 
+private extension Node where Context == HTML.DocumentContext {
+    
+    static func bootstrapHead<T: Website>(
+        for location: Location,
+        on site: T
+    ) -> Node {
+        .head(
+            for: location,
+            on: site,
+            titleSeparator: " | ",
+            stylesheetPaths: [
+                "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
+//                "MuriloWebsite/styles.css",
+//                "/styles.css",
+            ],
+            rssFeedPath: nil,
+            rssFeedTitle: nil
+        )
+    }
+    
+}
+
 private extension Node where Context == HTML.BodyContext {
     static func wrapper(_ nodes: Node...) -> Node {
-        .div(.class("wrapper"), .group(nodes))
+//        .div(.class("wrapper"), .group(nodes))
+        .div(.class("container p-4 text-left"), .group(nodes))
     }
-
-    static func header<T: Website>(
+    
+    static func header<T: Website> (
         for context: PublishingContext<T>,
         selectedSection: T.SectionID?
     ) -> Node {
         let sectionIDs = T.SectionID.allCases
-
+//        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+//          <span class="navbar-toggler-icon"></span>
+//        </button>
+        
         return .header(
-            .wrapper(
-                .a(.class("site-name"), .href("/"), .text(context.site.name)),
-                .if(sectionIDs.count > 1,
-                    .nav(
-                        .ul(.forEach(sectionIDs) { section in
-                            .li(.a(
-                                .class(section == selectedSection ? "selected" : ""),
-                                .href(context.sections[section].path),
-                                .text(context.sections[section].title)
-                            ))
-                        })
+            .nav(.class("navbar navbar-expand-lg navbar-dark bg-dark"),
+                 .div(.class("container"),
+                      .a(.class("navbar-brand h1"), .href("/"), .text(context.site.name)),
+                      .button(
+                        .class("navbar-toggler"),
+                        .data(named: "toggle", value: "collapse"),
+                        .data(named: "target", value: "#conteudoNavbarSuportado"),
+                        .ariaControls("conteudoNavbarSuportado"),
+                        .ariaExpanded(false),
+                        .ariaLabel("Alterna navegação"),
+                        .span(.class("navbar-toggler-icon"))
+                    ),
+                      .div(.class("collapse navbar-collapse"), .id("conteudoNavbarSuportado"),
+                           .ul(.class("navbar-nav ml-auto"),
+//                               .if(selectedSection == MuriloWebsite().SectionID.posts,
+//                                   .li(.class("nav-item \(section == selectedSection ? "active" : "")"),
+//                                       .a(.class("nav-link"),
+//                                          .href(context.sections[section].path),
+//                                          .text(context.sections[section].title)
+//                                    )
+//                                ),
+//                                   else:
+//                                .forEach(sectionIDs) { section in
+//                                    .li(.class("nav-item \(section == selectedSection ? "active" : "")"),
+//                                        .a(.class("nav-link"),
+//                                           .href(context.sections[section].path),
+//                                           .text(context.sections[section].title)
+//                                        )
+//                                    )
+//                                }
+//                            )
+                            .forEach(sectionIDs) { section in
+                                .li(.class("nav-item \(section == selectedSection ? "active" : "")"),
+                                    .a(.class("nav-link"),
+                                       .href(context.sections[section].path),
+                                       .text(context.sections[section].title)
+                                    )
+                                )
+                            }
+                        )
                     )
                 )
             )
         )
     }
+
+//    static func header<T: Website>(
+//        for context: PublishingContext<T>,
+//        selectedSection: T.SectionID?
+//    ) -> Node {
+//        let sectionIDs = T.SectionID.allCases
+//
+//        return .header(
+//            .wrapper(
+//                .a(.class("site-name"), .href("/"), .text(context.site.name)),
+//                .if(sectionIDs.count > 1,
+//                    .nav(
+//                        .ul(.forEach(sectionIDs) { section in
+//                            .li(.a(
+//                                .class(section == selectedSection ? "selected" : ""),
+//                                .href(context.sections[section].path),
+//                                .text(context.sections[section].title)
+//                            ))
+//                        })
+//                    )
+//                )
+//            )
+//        )
+//    }
 
     static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
         return .ul(
@@ -209,23 +293,27 @@ private extension Node where Context == HTML.BodyContext {
             .li(.a(
                 .href(site.path(for: tag)),
                 .text(tag.string)
-            ))
-        })
+                ))
+            })
     }
-
+    
     static func footer<T: Website>(for site: T) -> Node {
         return .footer(
+            .class("container text-center"),
             .p(
-                .text("Generated using "),
+                .text("Gerado com "),
                 .a(
                     .text("Publish"),
                     .href("https://github.com/johnsundell/publish")
-                )
+                ),
+                .text("."),
+                .br(),
+                .text("Copyright © 2020 Murilo Teixeira.")
             ),
-            .p(.a(
-                .text("RSS feed"),
-                .href("/feed.rss")
-            ))
+            
+            .script(.src("https://code.jquery.com/jquery-3.3.1.slim.min.js")),
+            .script(.src("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")),
+            .script(.src("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"))
         )
     }
 }

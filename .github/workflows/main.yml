@@ -31,14 +31,3 @@ jobs:
         commit_message: Update blog content
       env:
         GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
-    
-    - name: ls -a via ssh
-      uses: fifsky/ssh-action@master
-      with:
-        command: |
-          cd /tmp
-          ls -a
-        host: ${{ secrets.HOST }}
-        port: ${{ secrets.PORT}}
-        user: ${{ secrets.USERNAME}}
-        key: ${{ secrets.KEY}}

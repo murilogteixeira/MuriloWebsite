@@ -34,16 +34,14 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
 //                        .class("description"),
 //                        .text(context.site.description)
 //                    ),
-//                    .h2("Sobre mim"),
-//                    .itemList(
-//                        for: context.allItems(
-//                            sortedBy: \.date,
-//                            order: .descending
-//                        ),
-//                        on: context.site
-//                    )
-                    .h2("Sobre mim")
-                    
+                    .h2("Posts recentes"),
+                    .itemList(
+                        for: context.allItems(
+                            sortedBy: \.date,
+                            order: .descending
+                        ),
+                        on: context.site
+                    )
                 ),
                 .footer(for: context.site)
             )
@@ -56,6 +54,7 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .bootstrapHead(for: section, on: context.site),
+//            .head(for: section, on: context.site),
             .body(
                 .header(for: context, selectedSection: section.id),
                 .wrapper(
@@ -218,6 +217,23 @@ private extension Node where Context == HTML.BodyContext {
                     ),
                       .div(.class("collapse navbar-collapse"), .id("conteudoNavbarSuportado"),
                            .ul(.class("navbar-nav ml-auto"),
+//                               .if(selectedSection == MuriloWebsite().SectionID.posts,
+//                                   .li(.class("nav-item \(section == selectedSection ? "active" : "")"),
+//                                       .a(.class("nav-link"),
+//                                          .href(context.sections[section].path),
+//                                          .text(context.sections[section].title)
+//                                    )
+//                                ),
+//                                   else:
+//                                .forEach(sectionIDs) { section in
+//                                    .li(.class("nav-item \(section == selectedSection ? "active" : "")"),
+//                                        .a(.class("nav-link"),
+//                                           .href(context.sections[section].path),
+//                                           .text(context.sections[section].title)
+//                                        )
+//                                    )
+//                                }
+//                            )
                             .forEach(sectionIDs) { section in
                                 .li(.class("nav-item \(section == selectedSection ? "active" : "")"),
                                     .a(.class("nav-link"),

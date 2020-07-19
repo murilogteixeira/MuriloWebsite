@@ -11,13 +11,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: ls -a via ssh
-      uses: fifsky/ssh-action@master
+    - name: Deploy gh-pages to the Hostinger
+      uses: appleboy/ssh-action@master
       with:
-        command: |
-          pwd
-          ls -a
         host: ${{ secrets.HOST }}
-        port: ${{ secrets.PORT}}
-        user: ${{ secrets.USERNAME}}
-        key: ${{ secrets.KEY}}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          whoami
+          ls -al

@@ -31,3 +31,13 @@ jobs:
         commit_message: Update blog content
       env:
         GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
+    
+    - name: Deploy files to the Hostinger
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          git pull

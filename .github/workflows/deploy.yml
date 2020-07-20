@@ -2,7 +2,7 @@ name: Deploy Hostinger
 
 on:
   push:
-    branches: [ gh-pages ]
+    branches: [ master ]
 
 jobs:
   build:

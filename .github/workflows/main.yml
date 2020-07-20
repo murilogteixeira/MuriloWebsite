@@ -31,3 +31,8 @@ jobs:
         commit_message: Update blog content
       env:
         GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
+    - name: Deploy to the HOstinger
+      run: |
+        ssh -p 65002 u192553020@185.201.11.212
+        ${{secrets.PASSWORD}}
+        ls

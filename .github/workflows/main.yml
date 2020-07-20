@@ -6,18 +6,10 @@ on:
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-  
-    - name: Build Publish
-      run: |
-        git clone https://github.com/JohnSundell/Publish.git
-        cd Publish
-        make
-    - name: Generate Site
-      run: publish generate
       
     - name: Publish in github pages repo
       uses: crazy-max/ghaction-github-pages@v1.4.0
@@ -31,4 +23,14 @@ jobs:
         commit_message: Update blog content
       env:
         GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
- 
+
+    - name: Push to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
+          cd public_html
+          git pull

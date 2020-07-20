@@ -2,7 +2,7 @@ name: Deploy Hostinger
 
 on:
   push:
-    branches: [ master ]
+    branches: [ gh-pages ]
 
 jobs:
   build:
@@ -11,12 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Deploy to Staging server
-      uses: easingthemes/ssh-deploy@v2.0.7
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-        SOURCE: "Output/"
-        REMOTE_HOST: ${{ secrets.HOST }}
-        REMOTE_PORT: ${{ secrets.PORT }}
-        REMOTE_USER: ${{ secrets.USERNAME }}
-        TARGET: ${{ secrets.TARGET }}
+    - name: Push to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: cd ${{ secrets.PATH }} && git pull

@@ -2,7 +2,7 @@ name: Deploy Hostinger
 
 on:
   push:
-    branches: [ gh-pages ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -17,4 +17,8 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        script: cd ${{ secrets.PATH }} && git pull
+        script: |
+          cd ${{ secrets.PATH }}
+          git clone https://github.com/murilogteixeira/MuriloWebsite.git
+          cp -r MuriloWebsite/Output/* .
+          rm -r MuriloWebsite

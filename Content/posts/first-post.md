@@ -7,4 +7,4 @@ tags: first, article
 
 My first post's text.
 
-Testando o meu post no servidor
+Testando o meu post no servidor.

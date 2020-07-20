@@ -6,3 +6,5 @@ tags: first, article
 # My first post
 
 My first post's text.
+
+Testando o meu post no servidor

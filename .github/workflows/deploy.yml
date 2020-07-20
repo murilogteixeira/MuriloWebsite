@@ -11,13 +11,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
+    - name: ls -a via ssh
+      uses: fifsky/ssh-action@master
       with:
+        command: |
+          cd /tmp
+          ls -a
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: |
-          whoami
-          ls -al
+        user: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY}}

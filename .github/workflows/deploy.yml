@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           cd public_html
-          rm -r *
+          rm -r ./*
           git clone https://github.com/murilogteixeira/MuriloWebsite.git
           cp -r MuriloWebsite/Output/* .
           rm -r MuriloWebsite

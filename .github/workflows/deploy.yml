@@ -23,4 +23,4 @@ jobs:
           rm -r ./*
           git clone https://github.com/murilogteixeira/MuriloWebsite.git
           cp -r MuriloWebsite/Output/* .
-          rm -r MuriloWebsite
+          rm -rf MuriloWebsite

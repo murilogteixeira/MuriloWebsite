@@ -19,7 +19,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          cd ${{ secrets.PATH }}
-          git clone https://github.com/murilogteixeira/MuriloWebsite.git
-          cp -r MuriloWebsite/Output/* .
-          rm -r MuriloWebsite
+          cd domains/murilot.com/public_html/
+          ls -a
+          #git clone https://github.com/murilogteixeira/MuriloWebsite.git
+          #cp -r MuriloWebsite/Output/* .
+          #rm -r MuriloWebsite

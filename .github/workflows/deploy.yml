@@ -21,7 +21,6 @@ jobs:
         script: |
           cd public_html
           rm -r *
-          pwd
-#          git clone https://github.com/murilogteixeira/MuriloWebsite.git
-#          cp -r MuriloWebsite/Output/* .
-#          rm -r MuriloWebsite
+          git clone https://github.com/murilogteixeira/MuriloWebsite.git
+          cp -r MuriloWebsite/Output/* .
+          rm -r MuriloWebsite

@@ -232,7 +232,7 @@ private extension Node where Context == HTML.BodyContext {
 //                                           .text(context.sections[section].title)
 //                                        )
 //                                    )
-//                                }
+//                                } 
 //                            )
                             .forEach(sectionIDs) { section in
                                 .li(.class("nav-item \(section == selectedSection ? "active" : "")"),

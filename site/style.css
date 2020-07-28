@@ -1,0 +1,38 @@
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+@media(min-width: 992px) {
+    .heigh-screen {
+        height: calc(100vh - 70px);
+    }
+
+}
+
+@media(max-width: 992px) {
+    .center-text {
+        text-align: center;
+    }
+
+    .red {
+        background-color: green;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    body,
+    footer {
+        background-color: #222;
+        color: #ddd;
+    }
+}

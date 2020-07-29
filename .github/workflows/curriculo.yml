@@ -1,0 +1,26 @@
+
+name: deploy curriculo hostinger
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Publish in curriculo repo
+      uses: crazy-max/ghaction-github-pages@v1.4.0
+      with:
+        repo: murilogteixeira/MuriloWebsite
+        target_branch: curriculo
+        keep_history: true
+        allow_empty_commit: false
+        build_dir: site
+        committer_name: Murilo Teixeira 
+        commit_message: Update curriculo content
+      env:
+        GITHUB_PAT: ${{ secrets.REPO_TOKEN }}

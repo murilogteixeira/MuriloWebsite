@@ -1,4 +1,4 @@
-name: deploy site
+name: deploy curriculo hostinger
 
 on:
   push:

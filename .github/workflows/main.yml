@@ -1,4 +1,4 @@
-name: gh-pages
+name: site
 
 on:
   push:
@@ -15,12 +15,12 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1.4.0
       with:
         repo: murilogteixeira/MuriloWebsite
-        target_branch: gh-pages
+        target_branch: curriculo
         keep_history: true
         allow_empty_commit: false
-        build_dir: Output
+        build_dir: site
         committer_name: Murilo Teixeira 
-        commit_message: Update blog content
+        commit_message: Update site content
       env:
         GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
 

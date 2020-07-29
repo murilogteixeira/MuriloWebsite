@@ -1,4 +1,5 @@
-name: deploy blog gh-pages
+
+name: deploy curriculo repo
 
 on:
   push:
@@ -11,16 +12,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Publish in github pages repo
+    - name: Publish in curriculo repo
       uses: crazy-max/ghaction-github-pages@v1.4.0
       with:
         repo: murilogteixeira/MuriloWebsite
-        target_branch: gh-pages
+        target_branch: curriculo
         keep_history: true
         allow_empty_commit: false
-        build_dir: Output
+        build_dir: site
         committer_name: Murilo Teixeira 
-        commit_message: Update blog content
+        commit_message: Update curriculo content
       env:
         GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
-

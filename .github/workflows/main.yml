@@ -10,16 +10,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
-    - name: Publish in github pages repo
-      uses: crazy-max/ghaction-github-pages@v1.4.0
+
+    - name: Push to server
+      uses: appleboy/ssh-action@master
       with:
-        repo: murilogteixeira/MuriloWebsite
-        target_branch: curriculo
-        keep_history: true
-        allow_empty_commit: false
-        build_dir: site
-        committer_name: Murilo Teixeira 
-        commit_message: Update site content
-      env:
-        GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
+        host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
+          cd public_html
+          git pull

@@ -206,7 +206,7 @@ private extension Node where Context == HTML.BodyContext {
         return .header(
             .nav(.class("navbar navbar-expand-lg navbar-dark bg-dark"),
                  .div(.class("container"),
-                      .a(.class("navbar-brand h1 mt-2"), .href("/"), .text(context.site.name)),
+                      .a(.class("navbar-brand h1 mt-2"), .href("https://murilot.com"), .text(context.site.name)),
                       .button(
                         .class("navbar-toggler"),
                         .data(named: "toggle", value: "collapse"),
@@ -218,14 +218,20 @@ private extension Node where Context == HTML.BodyContext {
                     ),
                       .div(.class("collapse navbar-collapse"), .id("conteudoNavbarSuportado"),
                            .ul(.class("navbar-nav ml-auto"),
-                            .forEach(sectionIDs) { section in
-                                .li(.class("nav-item \(section == selectedSection ? "active" : "")"),
-                                    .a(.class("nav-link"),
-                                       .href(context.sections[section].path),
-                                       .text(context.sections[section].title)
-                                    )
+                               .li(
+                                .class("nav-item"),
+                                .a(.class("nav-link"),
+                                   .href("https://murilot.com"),
+                                   .text("Home")
                                 )
-                            }
+                            ),
+                               .li(
+                                .class("nav-item"),
+                                .a(.class("nav-link active"),
+                                   .href("https://blog.murilot.com"),
+                                   .text("Blog")
+                                )
+                            )
                         )
                     )
                 )

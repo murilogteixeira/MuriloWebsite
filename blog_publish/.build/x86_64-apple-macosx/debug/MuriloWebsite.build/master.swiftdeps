@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "5ca2daa0857b40bf3fb105bca2fe382b"
+build_time: [1596074341, 197883000]
+inputs:
+  "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/Sources/MuriloWebsite/MyTheme.swift": [1596074266, 344806058]
+  "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/Sources/MuriloWebsite/main.swift": [1596074337, 548874099]

@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/master.swiftdeps"
+  },
+  "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/Sources/MuriloWebsite/MyTheme.swift": {
+    "dependencies": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/MyTheme.d",
+    "object": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/MyTheme.swift.o",
+    "swiftmodule": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/MyTheme~partial.swiftmodule",
+    "swift-dependencies": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/MyTheme.swiftdeps"
+  },
+  "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/Sources/MuriloWebsite/main.swift": {
+    "dependencies": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/main.d",
+    "object": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/main.swift.o",
+    "swiftmodule": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/MuriloWebsite.build/main.swiftdeps"
+  }
+}

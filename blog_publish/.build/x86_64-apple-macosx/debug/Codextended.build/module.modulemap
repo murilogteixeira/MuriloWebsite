@@ -1,0 +1,4 @@
+module Codextended {
+    header "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/Codextended.build/Codextended-Swift.h"
+    requires objc
+}

@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "2ce9150f6253bb0f0e38ecdcf15dacd6"
+build_time: [1596074313, 353975000]
+inputs:
+  "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/checkouts/sweep/Sources/Sweep/Sweep.swift": [1596074308, 395721056]

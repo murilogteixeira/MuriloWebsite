@@ -6,9 +6,6 @@ import Plot
 struct MuriloWebsite: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
-        case projetos
-        case experiencias
-        case contato
         case posts
     }
 

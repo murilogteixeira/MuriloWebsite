@@ -19,7 +19,7 @@ jobs:
         target_branch: curriculo
         keep_history: true
         allow_empty_commit: false
-        build_dir: site
+        build_dir: curriculo
         committer_name: Murilo Teixeira 
         commit_message: Update curriculo content
       env:

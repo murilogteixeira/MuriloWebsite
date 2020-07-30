@@ -18,7 +18,7 @@ jobs:
         target_branch: gh-pages
         keep_history: true
         allow_empty_commit: false
-        build_dir: Output
+        build_dir: blog_publish/Output
         committer_name: Murilo Teixeira 
         commit_message: Update blog content
       env:

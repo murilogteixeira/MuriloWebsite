@@ -15,6 +15,12 @@
     font-size: 4em;
 }
 
+.profissao {
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-top: -18px;
+}
+
 @media(min-width: 992px){
     
     .heigh-screen {
@@ -35,6 +41,20 @@
         text-align: center;
     }
 
+    .profissao {
+        margin-top: -10px;
+    }
+}
+
+/* extra small */
+@media (max-width: 576px) {
+    .nome {
+        font-size: 2em;
+    }
+
+    .profissao {
+        font-size: 1.1em;
+    }
 }
 
 /* small */
@@ -43,6 +63,9 @@
         font-size: 2em;
     }
 
+    .profissao {
+        font-size: 1.2em;
+    }
 }
 
 /* medium */

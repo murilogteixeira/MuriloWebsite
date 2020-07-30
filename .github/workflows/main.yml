@@ -1,4 +1,4 @@
-name: deploy blog gh-pages
+name: copy blog to gh-pages
 
 on:
   push:

@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+.audio-wide-font {
+    font-family: 'Audiowide', cursive;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
 
 .vcenter {
     display: flex;
@@ -17,11 +28,11 @@
 
 .profissao {
     font-size: 1.2em;
-    font-weight: lighter;
+    font-weight: 200;
     margin-top: -18px;
 }
 
-@media(min-width: 992px){
+@media (min-width: 992px) and (min-height: 550px) {
     
     .heigh-screen {
         height: calc(100vh - 60px);

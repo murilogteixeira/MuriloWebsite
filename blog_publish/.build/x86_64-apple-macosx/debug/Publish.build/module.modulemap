@@ -1,4 +1,0 @@
-module Publish {
-    header "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/x86_64-apple-macosx/debug/Publish.build/Publish-Swift.h"
-    requires objc
-}

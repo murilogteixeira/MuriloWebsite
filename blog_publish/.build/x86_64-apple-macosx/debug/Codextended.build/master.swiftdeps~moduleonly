@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
-options: "766f13f62a0035f56b0a9b8f70f3e2c6"
-build_time: [1596074313, 353499000]
-inputs:
-  "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/checkouts/codextended/Sources/Codextended/Codextended.swift": [1596074309, 377165561]

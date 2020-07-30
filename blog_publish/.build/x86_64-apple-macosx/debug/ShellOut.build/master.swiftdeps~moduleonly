@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
-options: "d00e683eb624f5431d347568d1edaed2"
-build_time: [1596074313, 353528000]
-inputs:
-  "/Users/muriloteixeira/git/MuriloWebsite/blog_publish/.build/checkouts/shellout/Sources/ShellOut.swift": [1596074309, 573825459]

@@ -1,5 +1,5 @@
 
-name: copy curriculo website to curriculo repo
+name: copy curriculo to curriculo repo
 
 on:
   push:

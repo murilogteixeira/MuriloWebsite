@@ -10,12 +10,17 @@
     src: url(./fonts/Montserrat-Regular.ttf);
 }
 
+@font-face {
+    font-family: Montserrat-ExtraLight;
+    src: url(./fonts/Montserrat-ExtraLight.ttf);
+}
+
 .audio-wide-font {
-    font-family: 'Audiowide', cursive;
+    font-family: Audiowide, cursive;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .vcenter {
@@ -35,6 +40,7 @@ body {
 }
 
 .profissao {
+    font-family: Montserrat-ExtraLight;
     font-size: 1.2em;
     font-weight: 200;
     margin-top: -18px;
@@ -96,9 +102,9 @@ body {
 
 /* large */
 @media(min-width: 992px) and (max-width: 1200px) {
-    /* .nome {
+    .nome {
         font-size: 3.5em; 
-    } */
+    }
 }
 
 @media(prefers-color-scheme: dark) {

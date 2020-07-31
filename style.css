@@ -1,12 +1,12 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:wght@200;400&display=swap'); */
 
 @font-face {
-    font-family: 'Audiowide';
+    font-family: Audiowide;
     src: url(./fonts/Audiowide-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     src: url(./fonts/Montserrat-Regular.ttf);
 }
 

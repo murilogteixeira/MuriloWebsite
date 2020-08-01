@@ -46,6 +46,28 @@ body {
     margin-top: -18px;
 }
 
+dl {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0
+}
+dt {
+    float: left;
+    width: 30%;
+    /* adjust the width; make sure the total of both is 100% */
+    padding: 0;
+    margin: 0
+}
+dd {
+    float: left;
+    width: 70%;
+    /* adjust the width; make sure the total of both is 100% */
+    padding: 0;
+    margin: 0
+}
+
+
 @media (min-width: 992px) and (min-height: 550px) {
     
     .heigh-screen {

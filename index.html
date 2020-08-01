@@ -6,11 +6,13 @@
         <meta
         name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css">
         
-        <title>Murilo Teixeira | Desenvolvedor iOS</title>
+        <title>Desenvolvedor iOS | Murilo Teixeira</title>
     </head>
     <body>
         <!-- NavBar -->
@@ -18,7 +20,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
                     <!-- Título -->
-                    <a class="navbar-brand py-2 audio-wide-font" href="https://murilot.com">
+                    <a class="navbar-brand py-2 audio-wide-font" href="#inicio">
                         MuriloT
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -29,7 +31,11 @@
                         <ul class="navbar-nav ml-auto">
                             <!-- Link Home -->
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
+                                <a class="nav-link active" href="#sobre">Olá</a>
+                            </li>
+                            <!-- Link Home -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Olá</a>
                             </li>
                             <!-- Link Blog -->
                             <li class="nav-item">
@@ -41,9 +47,10 @@
             </nav>
         </div>
 
-        <!-- Foto, Nome e Profissão -->
-        <div class="container">
-            <div class="heigh-screen">
+        <!-- Conteúdo -->
+        <section class="container" id="inicio">
+            <!-- Foto, Nome e Profissão -->
+            <div class="heigh-screen" id="colorpad1">
                 <div class="row h-100 m-0 p-0">
 
                     <!-- Container Esquerda -->
@@ -68,13 +75,55 @@
 
                             <!-- Profissão -->
                             <div class="col-12 pl-lg-2 profissao montserrar-font">
-                                Desenvolvedor iOS
+                                desenvolvedor iOS
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="container" id="sobre">
+            <div class="row w-100 m-0 p-0"  id="colorpad2">
+                <div class="col-12 col-md-8 col-lg-6 m-auto">
+                    <p>
+                        Olá! Me chamo Murilo Teixeira.
+                    </p>
+
+                    <p>
+                        Sou desenvolvedor iOS com <span id="tempoExperiencia"></span> de experiência. 
+                        Sou aluno do projeto Apple Developer Academy da Universidade Católica de Brasília (UCB) e 
+                        curso o 8º, e último semestre, de Ciência da Computação na UCB.
+                    </p>
+                    <div>
+                        <dl>
+                            <dt>Telefone</dt>
+                            <dd>+55 61 99389-0862</dd>
+                            <dt>Email</dt>
+                            <dd>contato@murilot.com</dd>
+                            <dt>Cidade</dt>
+                            <dd>Brasília-DF</dd>
+                        </dl>
+                    </div>
+                    <p>
+                        <a target="blank" href="https://www.linkedin.com/in/murilot/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a target="blank" href="https://github.com/murilogteixeira">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a target="blank" href="https://www.instagram.com/murilotxr/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="col-12 col-md-8 col-lg-12 mx-auto">
+                        <img class="rounded w-100" src="./office-img.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <footer>
             <div class="text-center bg-dark p-3">
@@ -84,6 +133,7 @@
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            <script src="./script.js"></script>
         </footer>
     </body>
 </html>

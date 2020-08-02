@@ -14,68 +14,91 @@
         
         <title>Desenvolvedor iOS | Murilo Teixeira</title>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <!-- NavBar -->
-        <div class="fluid-container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">
-                    <!-- Título -->
-                    <a class="navbar-brand py-2 audio-wide-font" href="#inicio">
-                        MuriloT
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!-- Título -->
+                <a class="navbar-brand py-2 audiowide" onclick="changeClassLink()" href="#inicio">
+                    muriloT<span class="destaque">_</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-                        <ul class="navbar-nav ml-auto">
-                            <!-- Link Home -->
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#sobre">Olá</a>
-                            </li>
-                            <!-- Link Home -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Olá</a>
-                            </li>
-                            <!-- Link Blog -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="http://blog.murilot.com">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                    <ul class="navbar-nav nav nav-pills ml-auto">
+                        <!-- Link Home -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">olá</a>
+                        </li>
+                        <!-- Link Experiências -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiencia">experiências</a>
+                        </li>
+                        <!-- Link Formação -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#formacao">formação</a>
+                        </li>
+                        <!-- Link Skills -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">skills</a>
+                        </li>
+                        <!-- Link Portfólio -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">portfólio</a>
+                        </li>
+                        <!-- Link Últimos Posts -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ultimos-posts">blog</a>
+                        </li>
+                        <!-- Link Contato -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">contato</a>
+                        </li>
+                        <!-- Link Blog -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" onclick="changeClassLink(this)" href="http://blog.murilot.com">Blog</a>
+                        </li> -->
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
         <!-- Conteúdo -->
-        <section class="container" id="inicio">
-            <!-- Foto, Nome e Profissão -->
-            <div class="heigh-screen" id="">
-                <div class="row h-100 m-0 p-0">
-
-                    <!-- Container Esquerda -->
-                    <div class="col-12 col-lg-5 pt-5 pb-3 py-lg-5 pr-lg-4 text-center vcenter">
-
-                        <!-- Foto -->
-                        <div class="col-5 col-md-3 col-lg-7 col-xl-6 ml-lg-auto mx-auto mx-lg-0 p-0">
-                            <img class="rounded-circle w-100" src="https://media-exp1.licdn.com/dms/image/C4D03AQE0Aja9dTHJpw/profile-displayphoto-shrink_200_200/0?e=1601510400&v=beta&t=fNkcYijd9-hLJto7T9JDuWXc3DoW4o6Ezhu5Z_cIX4M">
-                        </div>
-                    </div>
-
-                    <!-- Container Direita -->
-                    <div class="col-12 col-lg-7 vcenter center-text">
-
-                        <!-- Nome e Profissão -->
-                        <div class="col-12 p-0 ">
-
-                            <!-- Nome -->
-                            <div class="ml-lg-2 px-0 h1 nome audio-wide-font">
-                                Murilo Teixeira
+        <div >
+        </div>
+        <!-- Início -->
+        <section class="fluid-container border-bottom border-dark py-5" id="inicio">
+            <div class="container">
+                <!-- Foto, Nome e Profissão -->
+                <div class="heigh-screen" id="">
+                    <div class="row h-100 m-lg-0 p-lg-0">
+    
+                        <!-- Container Esquerda -->
+                        <div class="col-12 col-lg-5 pt-5 pb-3 py-lg-5 pr-lg-4 mt-4 mt-lg-0 text-center vcenter">
+    
+                            <!-- Foto -->
+                            <div class="col-5 col-md-3 col-lg-7 col-xl-6 ml-lg-auto mx-auto mx-lg-0 p-0">
+                                <img class="rounded-circle w-100" src="https://media-exp1.licdn.com/dms/image/C4D03AQE0Aja9dTHJpw/profile-displayphoto-shrink_200_200/0?e=1601510400&v=beta&t=fNkcYijd9-hLJto7T9JDuWXc3DoW4o6Ezhu5Z_cIX4M">
                             </div>
-
-                            <!-- Profissão -->
-                            <div class="col-12 pl-lg-2 profissao montserrar-font">
-                                desenvolvedor iOS
+                        </div>
+    
+                        <!-- Container Direita -->
+                        <div class="col-12 col-lg-7 vcenter center-text">
+    
+                            <!-- Nome e Profissão -->
+                            <div class="col-12 p-0 ">
+    
+                                <!-- Nome -->
+                                <div class="ml-lg-2 px-0 h1 nome audiowide">
+                                    MuriloTeixeira
+                                </div>
+    
+                                <!-- Profissão -->
+                                <div class="col-12 pl-lg-2 profissao montserrar-font">
+                                    desenvolvedor iOS
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -83,43 +106,148 @@
             </div>
         </section>
 
-        <section class="container" id="sobre">
-            <div class="row w-100 m-0 p-0"  id="">
-                <div class="col-12 col-md-8 col-lg-6 m-auto">
-                    <p>
-                        Olá! Me chamo Murilo Teixeira.
-                    </p>
+        <!-- Sobre -->
+        <section class="fluid-container border-bottom border-dark py-5" id="sobre">
+            <div class="container">
+                <div class="row m-0"  id="">
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                        <p class="audiowide">
+                            olá<span class="destaque">_</span>
+                        </p>
 
-                    <p>
-                        Sou desenvolvedor iOS com <span id="tempoExperiencia"></span> de experiência. 
-                        Sou aluno do projeto Apple Developer Academy da Universidade Católica de Brasília (UCB) e 
-                        curso o 8º, e último semestre, de Ciência da Computação na UCB.
-                    </p>
-                    <div>
-                        <dl>
-                            <dt>Telefone</dt>
-                            <dd>+55 61 99389-0862</dd>
-                            <dt>Email</dt>
-                            <dd>contato@murilot.com</dd>
-                            <dt>Cidade</dt>
-                            <dd>Brasília-DF</dd>
-                        </dl>
+                        <p>
+                            Me chamo Murilo Teixeira.
+                        </p>
+    
+                        <p>
+                            Sou desenvolvedor iOS com <span id="tempoExperiencia"></span> de experiência. 
+                            Sou aluno do projeto Apple Developer Academy da Universidade Católica de Brasília (UCB) e 
+                            curso o 8º, e último semestre, de Ciência da Computação na UCB.
+                        </p>
+                        <div>
+                            <dl>
+                                <dt>
+                                    <i class="fas fa-phone-alt"></i>
+                                    Telefone
+                                </dt>
+                                <dd><a href="tel:+55 61 99389-0862">+55 61 99389-0862</a></dd>
+                                <dt>
+                                    <i class="fas fa-envelope"></i>
+                                    Email
+                                </dt>
+                                <dd><a href="mailto:contato@murilot.com">contato@murilot.com</a></dd>
+                                <dt>
+                                    <i class="fas fa-building"></i>
+                                    Cidade
+                                </dt>
+                                <dd>Brasília-DF</dd>
+                                <dt>
+                                    <i class="fas fa-user"></i>
+                                    Social
+                                </dt>
+                                <dd>
+                                    <a target="blank" href="https://www.linkedin.com/in/murilot/">
+                                        <i class="fab fa-linkedin-in btn pl-0 py-0"></i>
+                                    </a>
+                                    <a target="blank" href="https://github.com/murilogteixeira">
+                                        <i class="fab fa-github btn pl-0 py-0"></i>
+                                    </a>
+                                    <a target="blank" href="https://www.instagram.com/murilotxr/">
+                                        <i class="fab fa-instagram btn pl-0 py-0"></i>
+                                    </a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        <p>
+                        </p>
+                        <a href="./file.pdf" download="./file.pdf" class="btn btn-cv py-2 px-5">
+                            <i class="far fa-address-card mr-1"></i>
+                            Download Currículo
+                        </a>
                     </div>
-                    <p>
-                        <a target="blank" href="https://www.linkedin.com/in/murilot/">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a target="blank" href="https://github.com/murilogteixeira">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a target="blank" href="https://www.instagram.com/murilotxr/">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </p>
+                    <div class="col-lg-6 pt-5 pt-lg-0">
+                        <div class="col-12 col-md-8 col-lg-12 mx-auto p-0">
+                            <img class="rounded w-100" src="./office-img.jpg">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="col-12 col-md-8 col-lg-12 mx-auto">
-                        <img class="rounded w-100" src="./office-img.jpg">
+            </div>
+        </section>
+
+        <!-- Experiências -->
+        <section class="fluid-container border-bottom border-dark py-5" id="experiencia">
+            <div class="container">
+                <div class="row m-0"  id="">
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                        <p class="audiowide">
+                            experiências<span class="destaque">_</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formação Acadêmica -->
+        <section class="fluid-container border-bottom border-dark py-5" id="formacao">
+            <div class="container">
+                <div class="row m-0"  id="">
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                        <p class="audiowide">
+                            formação<span class="destaque">_</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="fluid-container border-bottom border-dark py-5" id="skills">
+            <div class="container">
+                <div class="row m-0"  id="">
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                        <p class="audiowide">
+                            skills<span class="destaque">_</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Porfólio -->
+        <section class="fluid-container border-bottom border-dark py-5" id="portfolio">
+            <div class="container">
+                <div class="row m-0"  id="">
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                        <p class="audiowide">
+                            portfólio<span class="destaque">_</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Últimos posts -->
+        <section class="fluid-container border-bottom border-dark py-5" id="ultimos-posts">
+            <div class="container">
+                <div class="row m-0"  id="">
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                        <p class="audiowide">
+                            últimosPosts<span class="destaque">_</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section class="fluid-container" id="contato">
+            <div class="container">
+                <div class="row m-0 py-5"  id="">
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                        <p class="audiowide">
+                            contato<span class="destaque">_</span>
+                        </p>
                     </div>
                 </div>
             </div>

@@ -3,6 +3,7 @@ $('document').ready(() => {
     setDateExperience();
 })
 
+
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -15,6 +16,7 @@ function getRandomColor() {
 function setRandomColor() {
     $("#colorpad1").css("background-color", getRandomColor());
     $("#colorpad2").css("background-color", getRandomColor());
+    $("#colorpad3").css("background-color", getRandomColor());
 }
 
 function monthDiff(d1, d2) {
@@ -38,4 +40,28 @@ function setDateExperience() {
     var mes = monthDiff(new Date(2019, 0, 0), new Date());
     var tempoExperiencia = yearAndMonthDiff(mes);
     $('#tempoExperiencia').text(tempoExperiencia);
+}
+
+function removeActive(link) {
+    if (link.classList.contains('active')) {
+        link.classList.remove('active');
+    }
+}
+
+function changeClassLink(onClicked) {
+
+    removeAllActiveLinks();
+
+    if (onClicked) {
+        onClicked.classList.add('active');
+    }
+
+}
+
+function removeAllActiveLinks() {
+    var navLinks = document.getElementsByClassName("nav-link")
+
+    for(var i = 0; i < navLinks.length; i++) {
+        removeActive(navLinks[i]);
+    }
 }

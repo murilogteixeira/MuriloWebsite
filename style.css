@@ -15,13 +15,27 @@
     src: url(./fonts/Montserrat-ExtraLight.ttf);
 }
 
-.audio-wide-font {
+.audiowide {
     font-family: Audiowide, cursive;
 }
 
 body {
+    position: relative;
     font-family: Montserrat, sans-serif;
 }
+
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: #21201E;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 
 .vcenter {
     display: flex;
@@ -44,6 +58,31 @@ body {
     font-size: 1.2em;
     font-weight: 200;
     margin-top: -18px;
+    color: #E0BE60;
+}
+
+.destaque {
+    color: #E0BE60;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #FBD46D;
+    text-decoration: none;
+}
+
+.btn-cv {
+    color: #07031a;
+    background-color: #E0BE60;
+    text-decoration: none;
+}
+
+.btn-cv:hover {
+    background-color: #FBD46D;
+    color: #07031a;
 }
 
 dl {
@@ -71,7 +110,8 @@ dd {
 @media (min-width: 992px) and (min-height: 550px) {
     
     .heigh-screen {
-        height: calc(100vh - 60px);
+        /* height: calc(100vh - 60px); */
+        height: 100vh;
     }
     
 }
@@ -80,7 +120,6 @@ dd {
     .nome {
         font-size: 1.7em;
     }
-
 }
 
 @media(max-width: 992px){
@@ -132,7 +171,11 @@ dd {
 @media(prefers-color-scheme: dark) {
     body,
     footer {
-        background-color: #222;
+        background-color: #1b262c;
         color: #ddd;
+    }
+
+    .navbar {
+        background-color: #07031a;
     }
 }

@@ -3,6 +3,14 @@ $('document').ready(() => {
     setDateExperience();
 })
 
+// Rolagem suave links internos
+$('a[href*=\\#]:not([href$=\\#])').click(function() {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 50
+    }, 500);
+});
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';

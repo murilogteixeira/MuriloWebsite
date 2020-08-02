@@ -61,6 +61,11 @@ body {
     color: #E0BE60;
 }
 
+.titulo {
+    font-size: 1.5em;
+    font-family: Audiowide;
+}
+
 .destaque {
     color: #E0BE60;
 }
@@ -171,7 +176,7 @@ dd {
 @media(prefers-color-scheme: dark) {
     body,
     footer {
-        background-color: #1b262c;
+        background-color: #222;
         color: #ddd;
     }
 

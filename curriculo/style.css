@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: Montserrat-ExtraLight;
-    src: url(./fonts/Montserrat-ExtraLight.ttf);
+    src: url(./fonts/Montserrat-Light.ttf);
 }
 
 .audiowide {
@@ -22,6 +22,7 @@
 body {
     position: relative;
     font-family: Montserrat, sans-serif;
+    font-size: 1em;
 }
 
 .fixed-top {
@@ -52,7 +53,7 @@ body {
 .profissao {
     font-family: Montserrat-ExtraLight;
     font-size: 1.2em;
-    font-weight: 200;
+    font-weight: 100;
     margin-top: -18px;
     color: #E0BE60;
 }

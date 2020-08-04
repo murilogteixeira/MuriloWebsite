@@ -102,19 +102,19 @@ a {
 }
 
 a:hover {
-    color: #FBD46D;
+    color: #BA9E50;
     text-decoration: none;
 }
 
 .btn-cv {
-    color: white;
-    background-color: #BA9E50;
+    color: #222;
+    background-color: #E0BE60; /*BA9E50*/
     text-decoration: none;
     font-weight: 900;
 }
 
 .btn-cv:hover {
-    background-color: #FBD46D;
+    background-color: #BA9E50; 
     color: #222;
 }
 
@@ -215,24 +215,7 @@ dd {
         color: #E0BE60;
     }
 
-    a {
-        color: #ddd;
-    }
-    
-    a:hover {
-        color: #E0BE60;
-        text-decoration: none;
-    }
-
-    .btn-cv {
-        color: #222;
-        background-color: #E0BE60; /*BA9E50*/
-        text-decoration: none;
-        font-weight: 900;
-    }
-    
-    .btn-cv:hover {
-        background-color: #BA9E50; 
+     a {
         color: #ddd;
     }
 

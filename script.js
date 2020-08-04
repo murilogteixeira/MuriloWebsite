@@ -1,6 +1,7 @@
 $('document').ready(() => {
     setRandomColor();
     setDateExperience();
+    // colorSchemeListener();
 })
 
 // Rolagem suave links internos
@@ -12,6 +13,16 @@ $('a[href*=\\#]:not([href$=\\#])').click(function() {
     }, 500);
 });
 
+// Esconder menu ao clicar em um link
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+$('.navbar-brand').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+// Obter uma cor aleatória
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -21,12 +32,14 @@ function getRandomColor() {
     return color;
 }
 
+// Configurar cor aleatória
 function setRandomColor() {
     $("#colorpad1").css("background-color", getRandomColor());
     $("#colorpad2").css("background-color", getRandomColor());
     $("#colorpad3").css("background-color", getRandomColor());
 }
 
+// Diferença de meses entre datas
 function monthDiff(d1, d2) {
     var months;
     months = (d2.getFullYear() - d1.getFullYear()) * 12;
@@ -36,6 +49,7 @@ function monthDiff(d1, d2) {
     return months <= 0 ? 0 : months;
 }
 
+// Anos e meses de diferença
 function yearAndMonthDiff(totalMonths) {
     var years = Math.floor(totalMonths / 12);
 
@@ -44,32 +58,9 @@ function yearAndMonthDiff(totalMonths) {
     return `${years} anos e ${months} meses`;
 }
 
+// Adicionar texto dee tempo de expeerriência
 function setDateExperience() {
     var mes = monthDiff(new Date(2019, 0, 0), new Date());
     var tempoExperiencia = yearAndMonthDiff(mes);
     $('#tempoExperiencia').text(tempoExperiencia);
-}
-
-function removeActive(link) {
-    if (link.classList.contains('active')) {
-        link.classList.remove('active');
-    }
-}
-
-function changeClassLink(onClicked) {
-
-    removeAllActiveLinks();
-
-    if (onClicked) {
-        onClicked.classList.add('active');
-    }
-
-}
-
-function removeAllActiveLinks() {
-    var navLinks = document.getElementsByClassName("nav-link")
-
-    for(var i = 0; i < navLinks.length; i++) {
-        removeActive(navLinks[i]);
-    }
 }

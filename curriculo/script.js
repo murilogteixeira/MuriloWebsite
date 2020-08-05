@@ -1,7 +1,7 @@
 $('document').ready(() => {
     setRandomColor();
     setDateExperience();
-    // colorSchemeListener();
+    colorSchemeListener();
 })
 
 // Rolagem suave links internos
@@ -63,4 +63,20 @@ function setDateExperience() {
     var mes = monthDiff(new Date(2019, 0, 0), new Date());
     var tempoExperiencia = yearAndMonthDiff(mes);
     $('#tempoExperiencia').text(tempoExperiencia);
+}
+
+function colorSchemeListener() {
+    window.matchMedia("(prefers-color-scheme: dark)").addListener( (e) => { 
+        e.matches ? activateDarkMode() : activateLightMode();
+    });
+}
+
+function activateDarkMode() {
+    document.getElementById('navbar').classList.remove('navbar-light');
+    document.getElementById('navbar').classList.add('navbar-dark');
+}
+
+function activateLightMode() {
+    document.getElementById('navbar').classList.remove('navbar-dark');
+    document.getElementById('navbar').classList.add('navbar-light');
 }

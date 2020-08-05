@@ -30,32 +30,6 @@ body {
     background-color: #eee;
 }
 
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: rgba(0,0,0,.8);
-}
-
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: rgba(0,0,0,.5);
-}
-
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:focus .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #444;
-}
-
-.custom-toggler.navbar-toggler { 
-    border-color: #222; 
-} 
-
-.custom-toggler .navbar-toggler-icon { 
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(34, 34, 34, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
-} 
-
 .fixed-top {
     position: fixed;
     top: 0;
@@ -106,16 +80,24 @@ a:hover {
     text-decoration: none;
 }
 
-.btn-cv {
+.btn-custom {
     color: #222;
     background-color: #E0BE60; /*BA9E50*/
     text-decoration: none;
     font-weight: 900;
 }
 
-.btn-cv:hover {
+.btn-custom:hover {
     background-color: #BA9E50; 
     color: #222;
+}
+
+.input-contato {
+    height: 47px;
+}
+
+.textarea-contato {
+    padding-top: 10px;
 }
 
 dl {
@@ -143,8 +125,8 @@ dd {
 @media (min-width: 992px) and (min-height: 550px) {
     
     .heigh-screen {
-        /* height: calc(100vh - 60px); */
-        height: 100vh;
+        height: calc(100vh - 32px);
+        /* height: 100vh; */
     }
     
 }
@@ -219,29 +201,4 @@ dd {
         color: #ddd;
     }
 
-    /* change the brand and text color */
-    .navbar-custom .navbar-brand,
-    .navbar-custom .navbar-text {
-        color: rgba(255,255,255,.8);
-    }
-
-    /* change the link color */
-    .navbar-custom .navbar-nav .nav-link {
-        color: rgba(255,255,255,.5);
-    }
-
-    /* change the color of active or hovered links */
-    .navbar-custom .nav-item.active .nav-link,
-    .navbar-custom .nav-item:focus .nav-link,
-    .navbar-custom .nav-item:hover .nav-link {
-        color: #ddd;
-    }
-
-    .custom-toggler.navbar-toggler { 
-        border-color: #ddd; 
-    } 
-    
-    .custom-toggler .navbar-toggler-icon { 
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(221, 221, 221, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
-    } 
 }

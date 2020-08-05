@@ -110,7 +110,7 @@
         <section class="fluid-container border-bottom border-dark py-5" id="sobre">
             <div class="container">
                 <div class="row m-0"  id="">
-                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                    <div class="col-12 col-lg-6 mx-auto m-lg-0">
                         <p class="titulo">
                             olá<span class="destaque">_</span>
                         </p>
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 pt-5 pt-lg-0">
-                        <div class="col-12 col-md-8 col-lg-12 mx-auto p-0">
+                        <div class="col-12 col-lg-12 mx-auto p-0">
                             <img class="rounded w-100" src="./office-img.jpg">
                         </div>
                     </div>
@@ -177,7 +177,7 @@
         <section class="fluid-container border-bottom border-dark py-5" id="experiencia">
             <div class="container">
                 <div class="row m-0"  id="">
-                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                    <div class="col-12 col-lg-6 mx-auto m-lg-0">
                         <p class="titulo">
                             experiência<span class="destaque">_</span>
                         </p>
@@ -190,7 +190,7 @@
         <section class="fluid-container border-bottom border-dark py-5" id="formacao">
             <div class="container">
                 <div class="row m-0"  id="">
-                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                    <div class="col-12 col-lg-6 mx-auto m-lg-0">
                         <p class="titulo">
                             formação<span class="destaque">_</span>
                         </p>
@@ -203,7 +203,7 @@
         <section class="fluid-container border-bottom border-dark py-5" id="skills">
             <div class="container">
                 <div class="row m-0"  id="">
-                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                    <div class="col-12 col-lg-6 mx-auto m-lg-0">
                         <p class="titulo">
                             skills<span class="destaque">_</span>
                         </p>
@@ -216,7 +216,7 @@
         <section class="fluid-container border-bottom border-dark py-5" id="portfolio">
             <div class="container">
                 <div class="row m-0"  id="">
-                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                    <div class="col-12 col-lg-6 mx-auto m-lg-0">
                         <p class="titulo">
                             portfólio<span class="destaque">_</span>
                         </p>
@@ -229,7 +229,7 @@
         <section class="fluid-container border-bottom border-dark py-5" id="ultimos-posts">
             <div class="container">
                 <div class="row m-0"  id="">
-                    <div class="col-12 col-md-8 col-lg-6 mx-auto m-lg-0">
+                    <div class="col-12 col-lg-6 mx-auto m-lg-0">
                         <p class="titulo">
                             últimosPosts<span class="destaque">_</span>
                         </p>
@@ -249,21 +249,22 @@
 
                         <div class="col-12 m-0 p-0">
                             <p>Deixe uma mensagem:</p>
-                            <form method="GET" action="/">
+                            <form id="form-contato" action="">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group col-12 p-0">
-                                            <input type="text" class="form-control input-contato" id="inputNome" aria-describedby="emailHelp" placeholder="Seu nome">
+                                            <input type="text" class="form-control input-contato" id="inputNome" aria-describedby="emailHelp" placeholder="Seu nome" required>
                                         </div>
                                         <div class="form-group col-12 p-0">
-                                            <input type="email" class="form-control input-contato" id="inputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                                            <input type="email" class="form-control input-contato" id="inputEmail" aria-describedby="emailHelp" placeholder="Seu email" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group col-12 p-0">
-                                            <textarea class="form-control textarea-contato" id="inputText" rows="4" placeholder="Digite sua mensagem aqui"></textarea>
+                                            <textarea class="form-control textarea-contato" id="inputText" rows="4" placeholder="Digite sua mensagem aqui" required></textarea>
                                         </div>
                                     </div>
+                                    <div id="alert" class="col-12 col-lg-6 w-100 ml-auto"></div>
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-custom float-right px-4">Enviar</button>
                                     </div>

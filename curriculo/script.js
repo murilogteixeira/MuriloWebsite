@@ -10,17 +10,19 @@ $('a[href*=\\#]:not([href$=\\#])').click(function() {
 
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top - 50
-    }, 500);
+    }, 500, () => {
+        $('.navbar-collapse').collapse('hide');
+    });
 });
 
 // Esconder menu ao clicar em um link
-$('.navbar-nav>li>a').on('click', function(){
-    $('.navbar-collapse').collapse('hide');
-});
+// $('.navbar-nav>li>a').on('click', function(){
+//     $('.navbar-collapse').collapse('hide');
+// });
 
-$('.navbar-brand').on('click', function(){
-    $('.navbar-collapse').collapse('hide');
-});
+// $('.navbar-brand').on('click', function(){
+//     $('.navbar-collapse').collapse('hide');
+// });
 
 // Obter uma cor aleatória
 function getRandomColor() {
@@ -66,6 +68,8 @@ function setDateExperience() {
 }
 
 function colorSchemeListener() {
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? activateDarkMode : activateLightMode;
+
     window.matchMedia("(prefers-color-scheme: dark)").addListener( (e) => { 
         e.matches ? activateDarkMode() : activateLightMode();
     });
@@ -89,6 +93,9 @@ $('#form-contato').submit( () => {
         email: $('#inputEmail').val(),
         texto: $('#inputText').val()
     }).toString();
+
+    $('#botao-enviar').html('<div class="spinner-border spinner-border-sm mr-1" role="status"></div>Enviando...');
+
     const callback = (data) => {
         console.log(data);
         if(data.statusOk) {
@@ -97,6 +104,8 @@ $('#form-contato').submit( () => {
         else {
             showAlert("danger", "Mensagem não enviada!", "Encontramos um problema ao enviar a mensagem. Tente novamente em alguns instantes e se o problema persistir, por favor, encaminhe diretamente para <a href='mailto:contato@murilot.com' class='alert-link'>contato@murilot.com</a>");
         }
+
+        $('#botao-enviar').html('Enviar');
     };
     
     request(method, url, params, callback);
@@ -118,7 +127,7 @@ function showAlert(tipo, titulo, msg) {
     alertDiv.innerHTML = alertContent;
 
     if(tipo !== 'danger') {
-        $(".alert").delay(5000).slideUp(200, function() {
+        $(".alert").delay(6000).slideUp(200, function() {
             $(this).alert('close');
         });
     }

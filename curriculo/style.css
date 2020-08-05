@@ -100,6 +100,16 @@ a:hover {
     padding-top: 10px;
 }
 
+.input-contato-color {
+    border-color: #bbb;
+}
+
+.input-contato-color:focus {
+    outline: none;
+    border-color: #E0BE60;
+    box-shadow: 0 0 4px #BA9E50;
+}
+
 dl {
     width: 100%;
     overflow: hidden;
@@ -120,7 +130,6 @@ dd {
     padding: 0;
     margin: 0
 }
-
 
 @media (min-width: 992px) and (min-height: 550px) {
     
@@ -198,6 +207,12 @@ dd {
     }
 
      a {
+        color: #ddd;
+    }
+
+    .input-contato-color,
+    .input-contato-color:focus {
+        background-color: #222;
         color: #ddd;
     }
 

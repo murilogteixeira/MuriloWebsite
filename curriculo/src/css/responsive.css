@@ -1,0 +1,65 @@
+@media (min-width: 992px) and (min-height: 550px) {
+    
+    .heigh-screen {
+        height: calc(100vh - 32px);
+        /* height: 100vh; */
+    }
+    
+}
+
+@media(max-width: 768px){
+    .nome {
+        font-size: 1.7em;
+    }
+}
+
+@media(max-width: 992px){
+    .center-text {
+        text-align: center;
+    }
+
+    .profissao {
+        margin-top: -10px;
+    }
+
+    #skills ul li {
+        padding: 2px 20px;
+        display: list-item;
+    }
+}
+
+/* extra small */
+@media (max-width: 576px) {
+    .nome {
+        font-size: 2em;
+    }
+
+    .profissao {
+        font-size: 1.1em;
+    }
+}
+
+/* small */
+@media (min-width: 576px) and (max-width: 768px) {
+    .nome {
+        font-size: 2em;
+    }
+
+    .profissao {
+        font-size: 1.2em;
+    }
+}
+
+/* medium */
+@media(min-width: 768px) and (max-width: 992px) {
+    .nome {
+        font-size: 2.2em;
+    }
+}
+
+/* large */
+@media(min-width: 992px) and (max-width: 1200px) {
+    .nome {
+        font-size: 3.5em; 
+    }
+}

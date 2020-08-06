@@ -1,0 +1,29 @@
+@media(prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: #ddd;
+    }
+    
+    .bg-custom {
+        background-color: #333 !important;
+    }
+
+    .destaque {
+        color: #E0BE60;
+    }
+
+     a {
+        color: #ddd;
+    }
+
+    .texto-cinza {
+        color: #aaa;
+    }
+
+    .input-contato-color,
+    .input-contato-color:focus {
+        background-color: #222;
+        color: #ddd;
+    }
+
+}

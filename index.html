@@ -267,103 +267,87 @@
         <!-- Porfólio -->
         <section class="fluid-container border-bottom border-dark py-5" id="portfolio">
             <div class="container">
-                <div class="row m-0"  id="">
+                <div class="row m-0">
                     <div class="col-12 mx-auto m-lg-0">
                         <h2 class="audiowide mb-4">
                             portfólio<span class="destaque">_</span>
                         </h2>
 
-                        <div class="row">
-                            <div class="col">
-                                <button class="btn btn-success" name="filter" onclick="galleryFilter(this)" value="">Todos</button>
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-primary" name="filter" onclick="galleryFilter(this)" value="iOS">iOS</button>
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-primary" name="filter" onclick="galleryFilter(this)" value="watchOS">watchOS</button>
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-primary" name="filter" onclick="galleryFilter(this)" value="tvOS">tvOS</button>
-                            </div>
-                        </div>
+                        <button class="btn btn-success" name="filter" onclick="galleryFilter(this)" value="">Todos</button>
+                        <button class="btn btn-custom" name="filter" onclick="galleryFilter(this)" value="iOS">iOS</button>
+                        <button class="btn btn-custom" name="filter" onclick="galleryFilter(this)" value="watchOS">watchOS</button>
+                        <button class="btn btn-custom" name="filter" onclick="galleryFilter(this)" value="tvOS">tvOS</button>
 
-                        <div class="card-deck" id="projects">
-                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-                                <div class="col p-0">
-                                    <div class="card bg-custom">
+                        <!-- <div class="card-deck" id="projects"> -->
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"id="projects">
+                                <div class="col-12 p-3">
+                                    <div class="card bg-custom h-100">
                                         <img class="card-img-top" src="https://picsum.photos/200" alt="Imagem de capa do card">
                                         <div class="card-body">
                                             <h5 class="card-title">Persist</h5>
-                                            <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-                                            <p class="card-text">
-                                                <small class="texto-cinza plataforma">iOS</small>
-                                            </p>
+                                        </div>
+                                        <div class="card-footer py-1">
+                                            <small class="texto-cinza plataforma">iOS</small>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col p-0">
-                                    <div class="card bg-custom">
+                                <div class="col p-3">
+                                    <div class="card bg-custom h-100">
                                         <img class="card-img-top" src="https://picsum.photos/200" alt="Imagem de capa do card">
                                         <div class="card-body">
                                             <h5 class="card-title">Reformise</h5>
-                                            <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-                                            <p class="card-text">
-                                                <small class="texto-cinza plataforma">iOS</small>
-                                            </p>
+                                        </div>
+                                        <div class="card-footer py-1">
+                                            <small class="texto-cinza plataforma">iOS</small>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col p-0">
-                                    <div class="card bg-custom">
+                                <div class="col p-3">
+                                    <div class="card bg-custom h-100">
                                         <img class="card-img-top" src="https://picsum.photos/200" alt="Imagem de capa do card">
                                         <div class="card-body">
                                             <h5 class="card-title">Amazeing Food</h5>
-                                            <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-                                            <p class="card-text">
-                                                <small class="texto-cinza plataforma">tvOS</small>
-                                            </p>
+                                        </div>
+                                        <div class="card-footer py-1">
+                                            <small class="texto-cinza plataforma">tvOS</small>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col p-0">
-                                    <div class="card bg-custom">
+                                <div class="col p-3">
+                                    <div class="card bg-custom h-100">
                                         <img class="card-img-top" src="https://picsum.photos/200" alt="Imagem de capa do card">
                                         <div class="card-body">
                                             <h5 class="card-title">Pommo</h5>
-                                            <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-                                            <p class="card-text">
-                                                <small class="texto-cinza plataforma">iOS</small>
-                                            </p>
+                                        </div>
+                                        <div class="card-footer py-1">
+                                            <small class="texto-cinza plataforma">iOS</small>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col p-0">
-                                    <div class="card bg-custom">
+                                <div class="col p-3">
+                                    <div class="card bg-custom h-100">
                                         <img class="card-img-top" src="https://picsum.photos/200" alt="Imagem de capa do card">
                                         <div class="card-body">
                                             <h5 class="card-title">Lummos</h5>
-                                            <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-                                            <p class="card-text">
-                                                <small class="texto-cinza plataforma">watchOS</small>
-                                            </p>
+                                        </div>
+                                        <div class="card-footer py-1">
+                                            <small class="texto-cinza plataforma">watchOS</small>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col p-0">
-                                    <div class="card bg-custom">
+                                <div class="col p-3">
+                                    <div class="card bg-custom h-100">
                                         <img class="card-img-top" src="https://picsum.photos/200" alt="Imagem de capa do card">
                                         <div class="card-body">
                                             <h5 class="card-title">PixelGame</h5>
-                                            <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-                                            <p class="card-text">
-                                                <small class="texto-cinza plataforma">macOS</small>
-                                            </p>
+                                        </div>
+                                        <div class="card-footer py-1">
+                                            <small class="texto-cinza plataforma">macOS</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <!-- </div> -->
 
 
                     </div>

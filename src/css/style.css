@@ -1,0 +1,161 @@
+.audiowide {
+    font-family: Audiowide, cursive;
+}
+
+body {
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    font-size: 1em;
+}
+
+/* change the background color */
+.bg-custom {
+    background-color: #eee;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
+.vcenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nome {
+    font-size: 4em;
+}
+
+.profissao {
+    font-family: Montserrat-ExtraLight;
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-top: -18px;
+}
+
+.texto-cinza {
+    color: #555;
+}
+
+.periodo {
+    position: relative;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+.destaque {
+    color: #BA9E50;
+}
+
+a {
+    color: #222;
+}
+
+a:hover {
+    color: #BA9E50;
+    text-decoration: none;
+}
+
+.btn-custom {
+    color: #222;
+    background-color: #E0BE60; /*BA9E50*/
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.btn-custom:hover {
+    background-color: #BA9E50; 
+    color: #222;
+}
+
+.descricao {
+    font-style: italic;
+}
+
+.descricao > ul  {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.descricao > ul > li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+.descricao > ul > li:before {
+    content: "-";
+    padding-right: 5px;
+}
+
+#skills ul {
+    padding:0px;
+    margin-left:-20px;
+    list-style:none;
+}
+
+#skills ul li {
+    padding: 0px 20px;
+    display: inline-block;
+}
+
+#skills ul li { display: inline; }
+
+
+
+.input-contato {
+    height: 47px;
+}
+
+.textarea-contato {
+    padding-top: 10px;
+}
+
+.input-contato-color {
+    border-color: #bbb;
+}
+
+.input-contato-color:focus {
+    outline: none;
+    border-color: #E0BE60;
+    box-shadow: 0 0 4px #BA9E50;
+}
+
+dl {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0
+}
+dt {
+    float: left;
+    width: 30%;
+    /* adjust the width; make sure the total of both is 100% */
+    padding: 0;
+    margin: 0
+}
+dd {
+    float: left;
+    width: 70%;
+    /* adjust the width; make sure the total of both is 100% */
+    padding: 0;
+    margin: 0
+}
+
+
+
+

@@ -62,9 +62,16 @@ body {
     margin-top: -18px;
 }
 
+.fonte-cinza {
+    color: #555;
+}
+
+.periodo {
+    position: relative;
+}
+
 .titulo {
-    font-size: 1.6em;
-    font-family: Audiowide;
+    font-weight: bold;
 }
 
 .destaque {
@@ -91,6 +98,39 @@ a:hover {
     background-color: #BA9E50; 
     color: #222;
 }
+
+.descricao {
+    font-style: italic;
+}
+
+.descricao > ul  {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.descricao > ul > li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+.descricao > ul > li:before {
+    content: "-";
+    padding-right: 5px;
+}
+
+#skills ul {
+    padding:0px;
+    margin-left:-20px;
+    list-style:none;
+}
+
+#skills ul li {
+    padding: 0px 20px;
+    display: inline-block;
+}
+
+#skills ul li { display: inline; }
 
 .input-contato {
     height: 47px;
@@ -154,6 +194,11 @@ dd {
     .profissao {
         margin-top: -10px;
     }
+
+    #skills ul li {
+        padding: 2px 20px;
+        display: list-item;
+    }
 }
 
 /* extra small */
@@ -208,6 +253,10 @@ dd {
 
      a {
         color: #ddd;
+    }
+
+    .fonte-cinza {
+        color: #aaa;
     }
 
     .input-contato-color,

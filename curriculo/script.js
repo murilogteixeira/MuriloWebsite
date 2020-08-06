@@ -68,7 +68,16 @@ function setDateExperience() {
 }
 
 function colorSchemeListener() {
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? activateDarkMode : activateLightMode;
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+
+    if(userPrefersDark){
+        activateDarkMode();
+    }
+    else if(userPrefersLight) {
+        activateLightMode();
+    }
 
     window.matchMedia("(prefers-color-scheme: dark)").addListener( (e) => { 
         e.matches ? activateDarkMode() : activateLightMode();
@@ -163,3 +172,4 @@ function request(method, url, params, callback) {
         }
     }
 }
+

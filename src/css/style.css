@@ -66,7 +66,7 @@ a {
 }
 
 a:hover {
-    color: #BA9E50;
+    color: #E0BE60;
     text-decoration: none;
 }
 
@@ -82,8 +82,33 @@ a:hover {
     color: #222;
 }
 
+.btn-custom.active {
+    outline: none;
+    box-shadow: 0 0 5px #BA9E50;
+}
+
 .descricao {
     font-style: italic;
+}
+
+.btn-transparent {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    padding: 0;
+    text-align: left;
+    color: #ddd;
+}
+
+.btn-transparent:hover {
+    color: #E0BE60;
+}
+
+.btn-transparent:focus {
+    outline: none;
 }
 
 .descricao > ul  {

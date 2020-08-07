@@ -5,7 +5,7 @@ var persist = {
     plataforma: 'iOS',
     descricao: '',
     linkDownload: 'https://apple.co/328NsLC',
-    linkImg: 'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/d6/17/ab/d617ab77-4ac3-8e74-0ecf-b556bc7b2543/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.png'
+    linkImg: 'https://github.com/murilogteixeira/MuriloWebsite/blob/master/imagens/persist.png?raw=true'
 }
 
 var reformise = {
@@ -13,7 +13,7 @@ var reformise = {
     plataforma: 'iOS',
     descricao: '',
     linkDownload: 'https://apple.co/2VCWZZ2',
-    linkImg: 'https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/e0/e9/01/e0e9010e-cb34-19ca-93b9-0603a9a1029f/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.jpeg/460x0w.jpg'
+    linkImg: 'https://github.com/murilogteixeira/MuriloWebsite/blob/master/imagens/reformise.png?raw=true'
 }
 
 var amazeingFood = {
@@ -21,7 +21,7 @@ var amazeingFood = {
     plataforma: 'tvOS',
     descricao: '',
     linkDownload: 'https://apple.co/32fpsav',
-    linkImg: 'https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/55/3a/ec/553aecca-a990-1f27-b252-8a061e663efb/App_Icon-marketing.lsr/626x0w.jpg'
+    linkImg: 'https://github.com/murilogteixeira/MuriloWebsite/blob/master/imagens/amazeing-food.png?raw=true'
 }
 
 var pommo = {
@@ -29,7 +29,7 @@ var pommo = {
     plataforma: 'iOS',
     descricao: '',
     linkDownload: 'https://apple.co/2zAN4MK',
-    linkImg: 'https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/ed/55/59/ed5559cd-a5ce-6663-8e54-9c07e3ead00b/AppIcon-0-1x_U007emarketing-0-5-0-85-220.png/460x0w.png'
+    linkImg: 'https://github.com/murilogteixeira/MuriloWebsite/blob/master/imagens/pommo.png?raw=true'
 }
 
 var lummos = {
@@ -37,7 +37,7 @@ var lummos = {
     plataforma: 'watchOS',
     descricao: '',
     linkDownload: 'https://apple.co/33Jnthg',
-    linkImg: 'https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/eb/c8/7f/ebc87fce-ad4a-f2d4-7ed6-36615d50614c/AppIcon-1x_U007emarketing-0-9-85-220.png/460x0w.png'
+    linkImg: 'https://github.com/murilogteixeira/MuriloWebsite/blob/master/imagens/lummos.png?raw=true'
 }
 
 var pixelGame = {

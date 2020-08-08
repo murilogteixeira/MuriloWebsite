@@ -1,18 +1,40 @@
 $('document').ready(() => {
-    setRandomColor();
+    loadContent();
     setDateExperience();
 })
 
-// Rolagem suave links internos
-$('a[href*=\\#]:not([href$=\\#])').click(function() {
-    event.preventDefault();
+function loadContent() {
+    // $('#navbar').load('./src/html/navbar.html');
+    $('#inicio').load('./src/html/inicio.html');
+    $('#sobre').load('./src/html/sobre.html');
+    $('#experiencia').load('./src/html/experiencia.html');
+    $('#formacao').load('./src/html/formacao.html');
+    $('#skills').load('./src/html/skills.html');
+    $('#portfolio').load('./src/html/portfolio.html');
+    $('#ultimos-posts').load('./src/html/ultimos-posts.html');
+    $('#contato').load('./src/html/contato.html');
+    $('#modal').load('./src/html/modal.html');
+}
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 50
-    }, 500, () => {
-        $('.navbar-collapse').collapse('hide');
+// Rolagem suave links internos
+$(function () {
+    $('a[href*="#"]:not([href="#"])').click(function () {
+
+        var target = $(this.hash);
+
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 50
+            }, 700, () => {
+                $('.navbar-collapse').collapse('hide');
+            });
+            return false;
+        }
+
     });
 });
+
+
 
 // Obter uma cor aleatória
 function getRandomColor() {

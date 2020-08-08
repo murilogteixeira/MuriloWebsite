@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row m-0">
+        <div class="col-12 mx-auto m-lg-0">
+            <h2 class="audiowide mb-4">
+                portfólio<span class="destaque">_</span>
+            </h2>
+
+            <!-- Filtros -->
+            <button class="btn btn-custom mx-1 active" name="filter" onclick="galleryFilter(this)" value="">Todos</button>
+            <button class="btn btn-custom mx-1" name="filter" onclick="galleryFilter(this)" value="iOS">iOS</button>
+            <button class="btn btn-custom mx-1" name="filter" onclick="galleryFilter(this)" value="watchOS">watchOS</button>
+            <button class="btn btn-custom mx-1" name="filter" onclick="galleryFilter(this)" value="tvOS">tvOS</button>
+            <button class="btn btn-custom mx-1" name="filter" onclick="galleryFilter(this)" value="macOS">macOS</button>
+
+            <!-- Projetos -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"id="projects"></div>
+
+            <script src="./src/js/galeria.js"></script>
+        </div>
+    </div>
+</div>

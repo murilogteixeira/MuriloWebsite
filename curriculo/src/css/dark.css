@@ -1,7 +1,10 @@
 @media(prefers-color-scheme: dark) {
-    body {
-        background-color: #222;
+    .fonte {
         color: #ddd;
+    }
+    
+    .bg {
+        background-color: #222;
     }
     
     .bg-custom {

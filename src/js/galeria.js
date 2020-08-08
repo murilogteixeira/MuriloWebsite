@@ -3,12 +3,12 @@ $('document').ready(() => {
 
     for(var i = 0; i < projetos.length; i++) {
         html += `
-        <div class="col-12 p-3">
-            <div class="card bg-custom h-100">
+        <div class="col p-3">
+            <div class="card bg-custom h-100 col-8 col-sm-12 p-0 m-0 mx-auto">
             <button type="button" class="btn-transparent" data-toggle="modal" data-target="#modalGaleria" data-whatever="${i}">
                 <img class="card-img-top rounded" src="${projetos[i].linkImg}" alt="Imagem do projeto ${projetos[i].nome}">
                 <div class="card-body">
-                    <h5 class="card-title">${projetos[i].nome}</h5>
+                    <h5 class="card-title fonte">${projetos[i].nome}</h5>
                 </div>
                 <div class="card-footer py-1">
                     <small class="texto-cinza plataforma">${projetos[i].plataforma}</small>

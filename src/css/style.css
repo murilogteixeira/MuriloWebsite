@@ -4,15 +4,13 @@
 
 body {
     position: relative;
+    text-align: justify;
 }
 
 .fonte {
     font-family: Montserrat, sans-serif;
     font-size: 1em;
-}
-
-.bg {
-    background-color: #222;
+    color: #222;
 }
 
 .bg-custom {
@@ -190,7 +188,3 @@ dd {
     padding: 0;
     margin: 0
 }
-
-
-
-

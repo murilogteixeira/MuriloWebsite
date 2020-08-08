@@ -4,11 +4,17 @@
 
 body {
     position: relative;
+}
+
+.fonte {
     font-family: Montserrat, sans-serif;
     font-size: 1em;
 }
 
-/* change the background color */
+.bg {
+    background-color: #222;
+}
+
 .bg-custom {
     background-color: #eee;
 }
@@ -74,7 +80,7 @@ a:hover {
     color: #222;
     background-color: #E0BE60; /*BA9E50*/
     text-decoration: none;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .btn-custom:hover {
@@ -109,6 +115,10 @@ a:hover {
 
 .btn-transparent:focus {
     outline: none;
+}
+
+.close:hover {
+    color: #444;
 }
 
 .descricao > ul  {

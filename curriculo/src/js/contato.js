@@ -42,11 +42,11 @@ function showAlert(tipo, titulo, msg) {
 
     alertDiv.innerHTML = alertContent;
 
-    if(tipo !== 'danger') {
-        $(".alert").delay(6000).slideUp(200, function() {
-            $(this).alert('close');
-        });
-    }
+    // if(tipo !== 'danger') {
+    //     $(".alert").delay(6000).slideUp(200, function() {
+    //         $(this).alert('close');
+    //     });
+    // }
 }
 
 function request(method, url, params, callback) {

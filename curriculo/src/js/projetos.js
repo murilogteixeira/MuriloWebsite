@@ -60,4 +60,4 @@ var pixelGame = {
     linkImg: './src/img/pixel-game.png'
 }
 
-projetos.push(persist, reformise, amazeingFood, pommo, lummos, pixelGame);
+// projetos.push(persist, reformise, amazeingFood, pommo, lummos, pixelGame);

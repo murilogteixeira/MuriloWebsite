@@ -38,7 +38,7 @@ function showAlert(tipo, titulo, msg) {
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-    `
+    `;
 
     alertDiv.innerHTML = alertContent;
 

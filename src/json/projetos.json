@@ -2,8 +2,8 @@
     {
         "nome": "Persist",
         "plataforma": "iOS",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula libero quis nisi feugiat, a rutrum eros interdum. Aenean auctor scelerisque auctor. Cras scelerisque facilisis metus quis varius. Quisque ac mattis augue. Cras bibendum, arcu et vehicula maximus, velit leo pulvinar nulla, in malesuada purus libero sit amet enim. Aliquam facilisis enim vel ligula sodales placerat. Proin ultrices sed urna at hendrerit. In fermentum vitae justo sed aliquet. Pellentesque vitae augue in nunc accumsan molestie nec a metus. Donec interdum dignissim leo, sit amet maximus justo gravida vitae. Aliquam blandit tincidunt justo vitae consectetur.",
-        "data": "Jan 2019",
+        "descricao": "Persist é um aplicativo para auxiliar e incentivar as pessoas a praticar mais atividades físicas, como aumentar a quantidade de passos no dia e lances de escada para subir. Ele te estimula por meio de frases de motivação, metas e desafios para conseguir conquistas e subir de nível, e dessa forma, te ajudar a cumprir seus objetivos.",
+        "data": "Jun 2019",
         "downloadOn": "AppStore",
         "linkDownload": "https://apple.co/328NsLC",
         "linkImg": "./src/img/persist.png"
@@ -11,8 +11,8 @@
     {
         "nome": "Reformise",
         "plataforma": "iOS",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula libero quis nisi feugiat, a rutrum eros interdum. Aenean auctor scelerisque auctor. Cras scelerisque facilisis metus quis varius. Quisque ac mattis augue. Cras bibendum, arcu et vehicula maximus, velit leo pulvinar nulla, in malesuada purus libero sit amet enim. Aliquam facilisis enim vel ligula sodales placerat. Proin ultrices sed urna at hendrerit. In fermentum vitae justo sed aliquet. Pellentesque vitae augue in nunc accumsan molestie nec a metus. Donec interdum dignissim leo, sit amet maximus justo gravida vitae. Aliquam blandit tincidunt justo vitae consectetur.",
-        "data": "Jan 2019",
+        "descricao": "Reformise é um aplicativo para encontrar arquitetos para os seus projetos de reformas, obras e qualquer outro projeto arquitetônico. Com ele você disponibiliza a foto do espaço a ser trabalhado, o tipo do projeto, a área, uma breve descrição e cadastra o serviço para que arquitetos o encontre possibilitando a negociação conforme as suas necessidades.",
+        "data": "Out 2019",
         "downloadOn": "AppStore",
         "linkDownload": "https://apple.co/2VCWZZ2",
         "linkImg": "./src/img/reformise.png"
@@ -20,8 +20,8 @@
     {
         "nome": "Amazeing Food",
         "plataforma": "tvOS",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula libero quis nisi feugiat, a rutrum eros interdum. Aenean auctor scelerisque auctor. Cras scelerisque facilisis metus quis varius. Quisque ac mattis augue. Cras bibendum, arcu et vehicula maximus, velit leo pulvinar nulla, in malesuada purus libero sit amet enim. Aliquam facilisis enim vel ligula sodales placerat. Proin ultrices sed urna at hendrerit. In fermentum vitae justo sed aliquet. Pellentesque vitae augue in nunc accumsan molestie nec a metus. Donec interdum dignissim leo, sit amet maximus justo gravida vitae. Aliquam blandit tincidunt justo vitae consectetur.",
-        "data": "Jan 2019",
+        "descricao": "Amazeing Food é um jogo divertido para jogar com a família e amigos na AppleTV. Com ele você tem o controle do personagem, porém vendado, e o seu amigo te ajuda a enfrentar um labirinto aleatório para escapar do inimigo e passar para a próxima fase.",
+        "data": "Fev 2020",
         "downloadOn": "AppStore",
         "linkDownload": "https://apple.co/32fpsav",
         "linkImg": "./src/img/amazeing-food.png"
@@ -29,8 +29,8 @@
     {
         "nome": "Pommo",
         "plataforma": "iOS",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula libero quis nisi feugiat, a rutrum eros interdum. Aenean auctor scelerisque auctor. Cras scelerisque facilisis metus quis varius. Quisque ac mattis augue. Cras bibendum, arcu et vehicula maximus, velit leo pulvinar nulla, in malesuada purus libero sit amet enim. Aliquam facilisis enim vel ligula sodales placerat. Proin ultrices sed urna at hendrerit. In fermentum vitae justo sed aliquet. Pellentesque vitae augue in nunc accumsan molestie nec a metus. Donec interdum dignissim leo, sit amet maximus justo gravida vitae. Aliquam blandit tincidunt justo vitae consectetur.",
-        "data": "Jan 2019",
+        "descricao": "Pommo é um aplicativo de produtividade baseado no método pomodoro de gerenciamento de tempo. Ele te ajuda a ignorar as distrações do celular e focar nas atividades que você realmente precisa. Sabemos que você realiza diversas atividades na sua vida e nelas você também precisa estar focado e ter produtividade.",
+        "data": "Mai 2019",
         "downloadOn": "AppStore",
         "linkDownload": "https://apple.co/2zAN4MK",
         "linkImg": "./src/img/pommo.png"
@@ -38,8 +38,8 @@
     {
         "nome": "Lummos",
         "plataforma": "watchOS",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula libero quis nisi feugiat, a rutrum eros interdum. Aenean auctor scelerisque auctor. Cras scelerisque facilisis metus quis varius. Quisque ac mattis augue. Cras bibendum, arcu et vehicula maximus, velit leo pulvinar nulla, in malesuada purus libero sit amet enim. Aliquam facilisis enim vel ligula sodales placerat. Proin ultrices sed urna at hendrerit. In fermentum vitae justo sed aliquet. Pellentesque vitae augue in nunc accumsan molestie nec a metus. Donec interdum dignissim leo, sit amet maximus justo gravida vitae. Aliquam blandit tincidunt justo vitae consectetur.",
-        "data": "Jan 2019",
+        "descricao": "Lummos é uma cena em que te proporciona um infinito para você se distrair e aliviar em momentos de estresse diariamente. Você controla um cometa, viajando em seu próprio espaço, trocando de cores, viajando pelo vasto universo junto a inúmeros planetas, galáxias e estrelas.",
+        "data": "Jul 2020",
         "downloadOn": "AppStore",
         "linkDownload": "https://apple.co/33Jnthg",
         "linkImg": "./src/img/lummos.png"
@@ -47,10 +47,10 @@
     {
         "nome": "PixelGame",
         "plataforma": "macOS",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula libero quis nisi feugiat, a rutrum eros interdum. Aenean auctor scelerisque auctor. Cras scelerisque facilisis metus quis varius. Quisque ac mattis augue. Cras bibendum, arcu et vehicula maximus, velit leo pulvinar nulla, in malesuada purus libero sit amet enim. Aliquam facilisis enim vel ligula sodales placerat. Proin ultrices sed urna at hendrerit. In fermentum vitae justo sed aliquet. Pellentesque vitae augue in nunc accumsan molestie nec a metus. Donec interdum dignissim leo, sit amet maximus justo gravida vitae. Aliquam blandit tincidunt justo vitae consectetur.",
-        "data": "Jan 2019",
-        "downloadOn": "AppStore",
-        "linkDownload": "https://apple.co/3gE4vwm",
+        "descricao": "PixelGame é um jogo que se passa em um mundo onde os Bugs roubaram os blocos de código que compõe a criação de todos os objetos do planeta. O Herói é o responsãvel por resgatar os blocos de código e recriar a programação desse planeta. Esse jogo foi criado com o intuito de ensinar programação básica a pessoas que não conhecem de programação de forma lúdica. Desenvolvido especialmente para o Scholarship WWDC2020, com muita alegria, foi um dos privilegiados projetos vencedores do concurso.",
+        "data": "Mai 2020",
+        "downloadOn": "GitHub",
+        "linkDownload": "https://bit.ly/3gE4vwm",
         "linkImg": "./src/img/pixel-game.png"
     }
 ]

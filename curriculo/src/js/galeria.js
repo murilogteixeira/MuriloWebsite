@@ -12,7 +12,7 @@ $('document').ready(() => {
                 <button type="button" class="btn-transparent" data-toggle="modal" data-target="#modalGaleria" data-whatever="${i}">
                     <img class="card-img-top rounded" src="${projetos[i].linkImg}" alt="Imagem do projeto ${projetos[i].nome}">
                     <div class="card-body">
-                        <h5 class="card-title fonte">${projetos[i].nome}</h5>
+                        <h5 class="card-title">${projetos[i].nome}</h5>
                     </div>
                     <div class="card-footer py-1">
                         <small class="texto-cinza plataforma">${projetos[i].plataforma}</small>

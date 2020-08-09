@@ -12,7 +12,7 @@ $('document').ready(() => {
             html += `
             <div class="col p-3">
                 <div class="card bg-custom h-100 col-8 col-sm-12 p-0 m-0 mx-auto">
-                <a href="${posts[i].path}" target="blank">
+                <a href="${posts[i].path}" target="blank" class="zoom">
                     <img class="card-img-top rounded" src="${posts[i].img}" alt="Imagem do post ${posts[i].img}">
                     <div class="card-body">
                         <h5 class="card-title">${posts[i].titulo}</h5>

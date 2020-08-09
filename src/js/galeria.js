@@ -22,8 +22,16 @@ $('document').ready(() => {
     document.getElementById('projects').innerHTML = html;
 })
 
-  function galleryFilter(button) {
-    var filter = button.value.toUpperCase();
+$('.filter').click(function () {
+    var filter = $(this).text();
+    $('.filterButton').text(filter);
+    $('.dropdown .dropdown-toggle').dropdown('toggle');
+    galleryFilter(filter == 'Tudo' ? '' : filter);
+    return false;
+})
+
+  function galleryFilter(filter) {
+    var filter = filter.toUpperCase();
     var cardContainer = document.getElementById("projects");
     var cards = cardContainer.getElementsByClassName("card");
     var title;
@@ -35,13 +43,4 @@ $('document').ready(() => {
             cards[i].parentNode.style.display = "none";
         }
     }
-
-    var filters = document.getElementsByName('filter');
-    for(var i = 0; i < filters.length; i++) {
-        if(filters[i].classList.contains('active') && filters[i].value != filter) {
-            filters[i].classList.remove('active');
-        }
-    }
-
-    button.classList.add('active');
 }

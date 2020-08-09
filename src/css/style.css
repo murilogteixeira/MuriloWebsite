@@ -115,6 +115,10 @@ a:hover {
     outline: none;
 }
 
+.filterButtonDiv {
+    width: 120px;
+}
+
 .close:hover {
     color: #444;
 }

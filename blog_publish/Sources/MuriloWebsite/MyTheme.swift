@@ -23,7 +23,10 @@ public extension Theme {
 private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<Site>) throws -> HTML {
-        HTML(
+        
+       createJsonLastedPosts(context.allItems(sortedBy: \.date, order: .descending))
+        
+        return HTML(
             .lang(context.site.language),
             .bootstrapHead(for: index, on: context.site),
 //            .head(for: index, on: context.site),
@@ -48,6 +51,13 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                 .footer(for: context.site)
             )
         )
+    }
+    
+    func createJsonLastedPosts(_ posts: [Item<Site>]) {
+        let fileName = "ultimosPosts"
+        let fileType = "json"
+        
+        
     }
 
     func makeSectionHTML(for section: Section<Site>,
@@ -200,7 +210,7 @@ private extension Node where Context == HTML.BodyContext {
         for context: PublishingContext<T>,
         selectedSection: T.SectionID?
     ) -> Node {
-        let sectionIDs = T.SectionID.allCases
+//        let sectionIDs = T.SectionID.allCases
         
         
         return .header(

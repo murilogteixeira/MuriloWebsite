@@ -58,7 +58,7 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                 {
                     "titulo": "\(posts[i].title)",
                     "img": "\("https://picsum.photos/200")",
-                    "path": "\(posts[i].path)",
+                    "path": "\("https://blog.murilot.com/")\(posts[i].path)",
                     "data": "\(posts[i].date.string)"
                 }\(i == 2 ? "" : ",")
             """

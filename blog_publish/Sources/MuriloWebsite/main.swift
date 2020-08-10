@@ -39,6 +39,6 @@ struct MuriloWebsite: Website {
 //}
 
 // This will generate your website using the built-in Foundation theme:
-try MuriloWebsite().publish(withTheme: .myTheme
+try MuriloWebsite().publish(withTheme: .foundation
 //                            additionalSteps: [.addDefaultSectionTitles()]
 )

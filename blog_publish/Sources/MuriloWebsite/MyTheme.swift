@@ -8,6 +8,7 @@
 import Plot
 import Publish
 import Foundation
+import ShellOut
 
 public extension Theme {
     /// The default "Foundation" theme that Publish ships with, a very
@@ -23,7 +24,7 @@ public extension Theme {
 private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
         func makeIndexHTML(for index: Index,
                        context: PublishingContext<Site>) throws -> HTML {
-            test()
+            generateLastedPostsJson(context.allItems(sortedBy: \.date, order: .descending))
             return HTML(
                 .lang(context.site.language),
                 .head(for: index, on: context.site),
@@ -49,18 +50,28 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
             )
     }
     
-    func test() {
-        let fm = FileManager.default
-        let path = Bundle.main.resourcePath!
-
+    func generateLastedPostsJson(_ posts: [Item<Site>]) {
+        var json = "["
+        for i in 0..<3 {
+            json = """
+            \(json)
+                {
+                    "titulo": "\(posts[i].title)",
+                    "img": "\("https://picsum.photos/200")",
+                    "path": "\(posts[i].path)",
+                    "data": "\(posts[i].date.string)"
+                }\(i == 2 ? "" : ",")
+            """
+        }
+        json += "\n]"
+        
         do {
-            let items = try fm.contentsOfDirectory(atPath: path)
-
-            for item in items {
-                print("Found \(item)")
-            }
+            try shellOut(to: [
+                "cd ~/git/MuriloWebsite/blog_publish",
+                "echo \'\(json)\' > ultimosPosts.json",
+            ])
         } catch {
-            // failed to read directory – bad permissions, perhaps?
+            print(error)
         }
     }
 

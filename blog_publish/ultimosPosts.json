@@ -1,20 +1,20 @@
 [
     {
-        "titulo": "titulo",
+        "titulo": "My first post",
         "img": "https://picsum.photos/200",
-        "path": "path",
-        "data": "0"
+        "path": "posts/first-post - cópia 10",
+        "data": "11/07/2020"
     },
     {
-        "titulo": "titulo",
+        "titulo": "My first post",
         "img": "https://picsum.photos/200",
-        "path": "path",
-        "data": "1"
+        "path": "posts/first-post - cópia 11",
+        "data": "11/07/2020"
     },
     {
-        "titulo": "titulo",
+        "titulo": "My first post",
         "img": "https://picsum.photos/200",
-        "path": "path",
-        "data": "2"
+        "path": "posts/first-post - cópia 12",
+        "data": "11/07/2020"
     }
 ]

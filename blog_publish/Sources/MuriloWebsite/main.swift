@@ -16,7 +16,7 @@ struct MuriloWebsite: Website {
     // Update these properties to configure your website:
     var url = URL(string: "https://murilot.com")!
     var name = "Murilo Teixeira"
-    var description = "Site pessoal, currículo, portfólio e blog."
+    var description = "Blog sobre tecnologia e tutoriais."
     var language: Language { .portuguese }
     var imagePath: Path? { nil }
 }
@@ -39,6 +39,4 @@ struct MuriloWebsite: Website {
 //}
 
 // This will generate your website using the built-in Foundation theme:
-try MuriloWebsite().publish(withTheme: .foundation
-//                            additionalSteps: [.addDefaultSectionTitles()]
-)
+try MuriloWebsite().publish(withTheme: .myTheme)

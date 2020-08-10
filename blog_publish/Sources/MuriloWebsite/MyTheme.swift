@@ -21,43 +21,47 @@ public extension Theme {
 }
 
 private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
-    func makeIndexHTML(for index: Index,
+        func makeIndexHTML(for index: Index,
                        context: PublishingContext<Site>) throws -> HTML {
-        
-       createJsonLastedPosts(context.allItems(sortedBy: \.date, order: .descending))
-        
-        return HTML(
-            .lang(context.site.language),
-            .bootstrapHead(for: index, on: context.site),
-//            .head(for: index, on: context.site),
-            .body(
-                .header(for: context, selectedSection: nil),
-                .container(
-//                    .h1(.text(index.title)),
-//                    .p(
-//                        .class("description"),
-//                        .text(context.site.description)
-//                    ),
-//                    .h2("Posts recentes"),
-//                    .itemList(
-//                        for: context.allItems(
-//                            sortedBy: \.date,
-//                            order: .descending
-//                        ),
-//                        on: context.site
-//                    )
-                    .h1(.text("Sobre mim"))
-                ),
-                .footer(for: context.site)
+            test()
+            return HTML(
+                .lang(context.site.language),
+                .head(for: index, on: context.site),
+                .body(
+                    .header(for: context, selectedSection: nil),
+                    .wrapper(
+                        .h1(.text(index.title)),
+                        .p(
+                            .class("description"),
+                            .text(context.site.description)
+                        ),
+                        .h2("Latest content"),
+                        .itemList(
+                            for: context.allItems(
+                                sortedBy: \.date,
+                                order: .descending
+                            ),
+                            on: context.site
+                        )
+                    ),
+                    .footer(for: context.site)
+                )
             )
-        )
     }
     
-    func createJsonLastedPosts(_ posts: [Item<Site>]) {
-        let fileName = "ultimosPosts"
-        let fileType = "json"
-        
-        
+    func test() {
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath!
+
+        do {
+            let items = try fm.contentsOfDirectory(atPath: path)
+
+            for item in items {
+                print("Found \(item)")
+            }
+        } catch {
+            // failed to read directory – bad permissions, perhaps?
+        }
     }
 
     func makeSectionHTML(for section: Section<Site>,
@@ -201,6 +205,10 @@ private extension Node where Context == HTML.DocumentContext {
 }
 
 private extension Node where Context == HTML.BodyContext {
+    static func wrapper(_ nodes: Node...) -> Node {
+        .div(.class("wrapper"), .group(nodes))
+    }
+    
     static func container(_ nodes: Node...) -> Node {
 //        .div(.class("wrapper"), .group(nodes))
         .div(.class("container p-4 text-left"), .group(nodes))

@@ -6,7 +6,7 @@ $('document').ready(() => {
     // console.log(data);
     // var projetos = JSON.parse(data);
 
-        var html = '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">';
+        var html = '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">';
     
         for(var i = 0; i < posts.length; i++) {
             html += `

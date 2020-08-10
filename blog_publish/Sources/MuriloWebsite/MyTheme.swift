@@ -67,7 +67,7 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
         
         do {
             try shellOut(to: [
-                "cd ~/git/MuriloWebsite/blog_publish",
+                "cd ~/git/MuriloWebsite/blog_publish/Output",
                 "echo \'\(json)\' > ultimosPosts.json",
             ])
         } catch {

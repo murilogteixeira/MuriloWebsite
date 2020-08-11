@@ -1,6 +1,6 @@
 $('document').ready(() => {
-    var rawbase = 'https://raw.githubusercontent.com/';
-    var jsonloc = 'murilogteixeira/MuriloWebsite/master/blog_publish/ultimosPosts.json';
+    var rawbase = 'https://blog.murilot.com/';
+    var jsonloc = 'ultimosPosts.json';
 
     $.getJSON(rawbase + jsonloc, function( posts ) {
     // console.log(data);

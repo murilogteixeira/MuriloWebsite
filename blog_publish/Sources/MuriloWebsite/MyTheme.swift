@@ -49,31 +49,6 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                 )
             )
     }
-    
-    func generateLastedPostsJson(_ posts: [Item<Site>]) {
-        var json = "["
-        for i in 0..<3 {
-            json = """
-            \(json)
-                {
-                    "titulo": "\(posts[i].title)",
-                    "img": "\("https://picsum.photos/200")",
-                    "path": "\("https://blog.murilot.com/")\(posts[i].path)",
-                    "data": "\(posts[i].date.string)"
-                }\(i == 2 ? "" : ",")
-            """
-        }
-        json += "\n]"
-        
-        do {
-            try shellOut(to: [
-                "cd ~/git/MuriloWebsite/blog_publish/Output",
-                "echo \'\(json)\' > ultimosPosts.json",
-            ])
-        } catch {
-            print(error)
-        }
-    }
 
     func makeSectionHTML(for section: Section<Site>,
                          context: PublishingContext<Site>) throws -> HTML {
@@ -190,6 +165,33 @@ private struct MyThemeHTMLFactory<Site: Website>: HTMLFactory {
                 .footer(for: context.site)
             )
         )
+    }
+}
+
+private extension MyThemeHTMLFactory {
+    func generateLastedPostsJson(_ posts: [Item<Site>]) {
+        var json = "["
+        for i in 0..<3 {
+            json = """
+            \(json)
+                {
+                    "titulo": "\(posts[i].title)",
+                    "img": "\("https://picsum.photos/200")",
+                    "path": "\("https://blog.murilot.com/")\(posts[i].path)",
+                    "data": "\(posts[i].date.string)"
+                }\(i == 2 ? "" : ",")
+            """
+        }
+        json += "\n]"
+        
+        do {
+            try shellOut(to: [
+                "cd ~/git/MuriloWebsite/blog_publish/Output",
+                "echo \'\(json)\' > ultimosPosts.json",
+            ])
+        } catch {
+            print("Json generate error: "\(error)")
+        }
     }
 }
 

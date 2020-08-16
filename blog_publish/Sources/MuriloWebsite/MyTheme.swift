@@ -190,7 +190,7 @@ private extension MyThemeHTMLFactory {
                 "echo \'\(json)\' > ultimosPosts.json",
             ])
         } catch {
-            print("Json generate error: "\(error)")
+            print("Json generate error: \(error)")
         }
     }
 }

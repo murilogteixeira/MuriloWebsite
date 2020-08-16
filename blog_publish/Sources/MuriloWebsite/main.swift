@@ -14,7 +14,7 @@ struct MuriloWebsite: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://murilot.com")!
+    var url = URL(string: "https://blog.murilot.com")!
     var name = "Murilo Teixeira"
     var description = "Blog sobre tecnologia e tutoriais."
     var language: Language { .portuguese }

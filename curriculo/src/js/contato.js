@@ -1,4 +1,4 @@
-$('#form-contato').submit( () => {
+$('#form-contato').submit(() => {
     const method = 'POST';
     const url = 'https://api-murilo.mybluemix.net/send-email';
     const params = new URLSearchParams({
@@ -11,7 +11,7 @@ $('#form-contato').submit( () => {
 
     const callback = (data) => {
         console.log(data);
-        if(data.statusOk) {
+        if (data.statusCode >= 200 && data.statusCode <= 299) {
             showAlert("success", "Obrigado pelo seu contato!", "Sua mensagem foi enviada e retornarei em breve.");
         }
         else {
@@ -23,7 +23,7 @@ $('#form-contato').submit( () => {
         $('#inputEmail').val('');
         $('#inputText').val('');
     };
-    
+
     request(method, url, params, callback);
     return false;
 })
@@ -52,7 +52,7 @@ function showAlert(tipo, titulo, msg) {
 function request(method, url, params, callback) {
     var ajax = new XMLHttpRequest();
 
-    if(method === 'POST' || method === 'post') {
+    if (method === 'POST' || method === 'post') {
         ajax.open(method, url, true);
         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         ajax.send(params);
@@ -64,18 +64,18 @@ function request(method, url, params, callback) {
 
     // Cria um evento para receber o retorno.
     ajax.onreadystatechange = () => {
-    // Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
-        if (ajax.readyState == 4 && ajax.status == 200) {
+        // Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
+        // if (ajax.readyState == 4 && ajax.status >= 200 && ajax.status <= 299) {
             // Retorno do Ajax
             var ajaxReturn = ajax.responseText;
             var data = JSON.parse(ajaxReturn);
             callback(data);
-        }
-        else if (ajax.readyState == 4 && ajax.status != 200) {
-            callback({
-                'statusOk': false,
-                'msg': 'Mensagem não envidada'
-            });
-        }
+        // }
+        // else if (ajax.readyState == 4 && ajax.status < 200 || ajax.status > 299) {
+        //     callback({
+        //         'statusOk': false,
+        //         'msg': 'Mensagem não envidada'
+        //     });
+        // }
     }
 }

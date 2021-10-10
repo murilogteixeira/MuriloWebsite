@@ -27,6 +27,8 @@ jobs:
           script: |
             cd public_html
             git pull
+
+      - name: Push to server 2
         uses: garygrossgarten/github-action-ssh@release
         with:
           command: ls -a

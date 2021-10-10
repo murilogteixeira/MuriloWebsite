@@ -27,10 +27,10 @@ jobs:
           script: |
             cd public_html
             git pull
-         uses: garygrossgarten/github-action-ssh@release
-            with:
-            command: ls -a
-            host: ${{ secrets.HOST }}
-            username: garygrossgarten
-            passphrase: ${{ secrets.PASSPHRASE }}
-            privateKey: ${{ secrets.SSH_KEY_GITHUB_ACTIONS }}
+        uses: garygrossgarten/github-action-ssh@release
+          with:
+          command: ls -a
+          host: ${{ secrets.HOST }}
+          username: garygrossgarten
+          passphrase: ${{ secrets.PASSPHRASE }}
+          privateKey: ${{ secrets.SSH_KEY_GITHUB_ACTIONS }}

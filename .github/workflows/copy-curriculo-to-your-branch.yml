@@ -33,6 +33,6 @@ jobs:
         with:
           command: ls -a
           host: ${{ secrets.HOST }}
-          username: garygrossgarten
+          username: u192553020
           passphrase: ${{ secrets.PASSPHRASE }}
           privateKey: ${{ secrets.SSH_KEY_GITHUB_ACTIONS }}

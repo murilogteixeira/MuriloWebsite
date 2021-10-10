@@ -28,7 +28,7 @@ jobs:
             cd public_html
             git pull
         uses: garygrossgarten/github-action-ssh@release
-          with:
+        with:
           command: ls -a
           host: ${{ secrets.HOST }}
           username: garygrossgarten

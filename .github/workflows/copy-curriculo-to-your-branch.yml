@@ -17,13 +17,3 @@ jobs:
         with:
           branch: curriculo # The branch the action should deploy to.
           folder: curriculo # The folder the action should deploy.
-      - name: Push to server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          script: |
-            cd public_html
-            git pull

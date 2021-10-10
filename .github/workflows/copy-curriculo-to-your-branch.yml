@@ -1,4 +1,4 @@
-name: Deploy curriculo on Curriculo Branch
+name: Deploy Curriculo
 on: [push]
 jobs:
   build-and-deploy:
@@ -18,10 +18,12 @@ jobs:
           branch: curriculo # The branch the action should deploy to.
           folder: curriculo # The folder the action should deploy.
       - name: Push to server
-        uses: garygrossgarten/github-action-ssh@release
+        uses: appleboy/ssh-action@master
         with:
-          command: ls -a
           host: ${{ secrets.HOST }}
-          username: u192553020
-          passphrase: ${{ secrets.PASSPHRASE }}
-          privateKey: ${{ secrets.SSH_KEY_GITHUB_ACTIONS }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd public_html
+            git pull

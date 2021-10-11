@@ -1,8 +1,6 @@
 name: Pull Curriculo on Hostinger
 on: 
-  push:
-    branches: 
-      - curriculo
+  push: [curriculo]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

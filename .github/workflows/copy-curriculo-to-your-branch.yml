@@ -10,8 +10,8 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          branch: curriculo # The branch the action should deploy to.
           folder: curriculo # The folder the action should deploy.
+          branch: curriculo # The branch the action should deploy to.
           
 #       - name: Publish in github pages repo
 #         uses: crazy-max/ghaction-github-pages@v1.4.0

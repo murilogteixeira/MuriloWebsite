@@ -12,7 +12,7 @@ $('#form-contato').submit(() => {
     const callback = (data) => {
         console.log(data);
         if (data.statusCode >= 200 && data.statusCode <= 299) {
-            showAlert("success", "Obrigado pelo seu contato!", "Sua mensagem foi enviada e retornarei em breve.");
+            showAlert("success", "Obrigado por deixar a sua mensagem!", "A mensagem foi enviada e em breve entrarei em contato através do email informado.");
         }
         else {
             showAlert("danger", "Mensagem não enviada!", "Encontramos um problema ao enviar a mensagem. Tente novamente em alguns instantes e se o problema persistir, por favor, encaminhe diretamente para <a href='mailto:contato@murilot.com' class='alert-link'>contato@murilot.com</a>");

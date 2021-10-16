@@ -25,3 +25,13 @@ jobs:
 #           commit_message: Update blog content
 #         env:
 #           GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
+      - name: Push to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd public_html
+            git pull

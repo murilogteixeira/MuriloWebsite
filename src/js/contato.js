@@ -1,17 +1,18 @@
 $('#form-contato').submit(() => {
     const method = 'POST';
-    const url = 'https://api-murilo.mybluemix.net/send-email';
-    const params = new URLSearchParams({
-        nome: $('#inputNome').val(),
+    // const url = 'https://api-murilo.mybluemix.net/send-email';
+    // const url = 'http://localhost:8080/send-email';
+    const url = 'https://murilot-vapor-api.herokuapp.com/send-email';
+    const json = {
+        name: $('#inputNome').val(),
         email: $('#inputEmail').val(),
-        texto: $('#inputText').val()
-    }).toString();
+        message: $('#inputText').val()
+    };
 
     $('#botao-enviar').html('<div class="spinner-border spinner-border-sm mr-1" role="status"></div>Enviando...');
 
     const callback = (data) => {
-        console.log(data);
-        if (data.statusCode >= 200 && data.statusCode <= 299) {
+        if (data.error === false) {
             showAlert("success", "Obrigado por deixar a sua mensagem!", "A mensagem foi enviada e em breve entrarei em contato através do email informado.");
         }
         else {
@@ -24,7 +25,7 @@ $('#form-contato').submit(() => {
         $('#inputText').val('');
     };
 
-    request(method, url, params, callback);
+    request(method, url, json, callback);
     return false;
 })
 
@@ -47,35 +48,36 @@ function showAlert(tipo, titulo, msg) {
     //         $(this).alert('close');
     //     });
     // }
+    $(".alert").delay(6000).slideUp(200, function () {
+        $(this).alert('close');
+    });
 }
 
-function request(method, url, params, callback) {
+function request(method, url, json, callback) {
     var ajax = new XMLHttpRequest();
+    var data;
 
     if (method === 'POST' || method === 'post') {
         ajax.open(method, url, true);
-        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        ajax.send(params);
+        ajax.setRequestHeader("Content-type", "application/json");
+        data = JSON.stringify(json);
+        ajax.send(data);
     }
     else if (method === 'GET' || method === 'get') {
-        ajax.open(method, url + '/?' + params, true);
+        data = URLSearchParams(json).toString()
+        ajax.open(method, url + '/?' + data, true);
         ajax.send();
     }
+    
+    console.log(`Request (${method}), Data: ${data}`);
 
     // Cria um evento para receber o retorno.
     ajax.onreadystatechange = () => {
-        // Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
-        // if (ajax.readyState == 4 && ajax.status >= 200 && ajax.status <= 299) {
-            // Retorno do Ajax
-            var ajaxReturn = ajax.responseText;
-            var data = JSON.parse(ajaxReturn);
-            callback(data);
-        // }
-        // else if (ajax.readyState == 4 && ajax.status < 200 || ajax.status > 299) {
-        //     callback({
-        //         'statusOk': false,
-        //         'msg': 'Mensagem não envidada'
-        //     });
-        // }
+        // Retorno do Ajax
+        var ajaxReturn = ajax.responseText;
+        var data = JSON.parse(ajaxReturn);
+        callback(data);
+        console.log(data);
+
     }
 }

@@ -13,15 +13,15 @@ jobs:
           folder: curriculo # The folder the action should deploy.
           branch: curriculo # The branch the action should deploy to.
           
-      - name: Publish in github pages repo
-        uses: crazy-max/ghaction-github-pages@v1.4.0
-        with:
-          repo: murilogteixeira/MuriloWebsite
-          target_branch: curriculo
-          keep_history: true
-          allow_empty_commit: false
-          build_dir: curriculo
-          committer_name: Murilo Teixeira 
-          commit_message: Update blog content
-        env:
-          GITHUB_PAT: ${{ secrets.REPO_TOKEN }}
+#       - name: Publish in curriculo repo
+#         uses: crazy-max/ghaction-github-pages@v1.4.0
+#         with:
+#           repo: murilogteixeira/MuriloWebsite
+#           target_branch: curriculo
+#           keep_history: true
+#           allow_empty_commit: false
+#           build_dir: curriculo
+#           committer_name: Murilo Teixeira 
+#           commit_message: Update blog content
+#         env:
+#           GITHUB_PAT: ${{ secrets.REPO_TOKEN }}

@@ -2,7 +2,7 @@ $('#form-contato').submit(() => {
     const method = 'POST';
     // const url = 'https://api-murilo.mybluemix.net/send-email';
     // const url = 'http://localhost:8080/send-email';
-    const url = 'https://murilot-vapor-api.herokuapp.com/send-email';
+    const url = 'https://murilot-vapor-api.herokuapp.com/murilot-website/send-email';
     const json = {
         name: $('#inputNome').val(),
         email: $('#inputEmail').val(),
